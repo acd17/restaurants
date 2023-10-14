@@ -5,53 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap Example</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
    <nav class="bg-stone-500">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <!--
-                Icon when menu is closed.
-    
-                Menu open: "hidden", Menu closed: "block"
-              -->
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <!--
-                Icon when menu is open.
-    
-                Menu open: "block", Menu closed: "hidden"
-              -->
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div x-data="{ sidebarOpen: false }">
-               <!-- Tombol untuk membuka/menutup sidebar -->
-               <button @click="sidebarOpen = !sidebarOpen" class="p-2">
-                   <img class="h-8 w-auto" src="../navbar/aset/menu-svgrepo-com.svg" alt="Your Company">
-               </button>
-       
-               <!-- Sidebar -->
-               <div :class="{'translate-x-0': sidebarOpen, '-translate-x-full': !sidebarOpen}" class="fixed left-0 top-0 h-full w-64 bg-stone-600 opacity-95 transition-transform duration-300 ease-in-out transform z-10">
-                   <!-- Isi sidebar Anda di sini -->
-                   <ul class="p-4">
-                       <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Best Offers</a></li>
-                       <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Recommendation</a></li>
-                       <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">About Us</a></li>
-                       <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Menu</a></li>
-                   </ul>
-               </div>
-           </div>
-       
+              <!-- Tombol untuk membuka/menutup sidebar -->
+              <button @click="sidebarOpen = !sidebarOpen" class="p-2">
+                  <img class="h-8 w-auto" src="../navbar/aset/menu-svgrepo-com.svg" alt="Your Company">
+              </button>
+          
+              <!-- Sidebar -->
+              <div :class="{'translate-x-0': sidebarOpen, '-translate-x-full': !sidebarOpen}" class="fixed left-0 top-0 h-full w-64 bg-stone-600 opacity-95 transition-transform duration-300 ease-in-out transform z-10">
+                  <!-- Isi sidebar Anda di sini -->
+                  <ul class="p-4">
+                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Best Offers</a></li>
+                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Recommendation</a></li>
+                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover-bg-stone-700 rounded-lg">About Us</a></li>
+                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover-bg-stone-700 rounded-lg">Menu</a></li>
+                  </ul>
+              </div>
+          </div>          
            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
             <div class="hidden sm:ml-80 sm:block items-center">
                <div class="flex flex-col items-center">
@@ -76,25 +55,38 @@
                    <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
                </div>
            </div>
-       
+           
            <!-- Sertakan script Tailwind CSS dan Alpine.js jika diperlukan -->
            <script src="path/to/your/tailwind.js"></script>
            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
-       </body>
           </div>
         </div>
       </div>
-    
-      <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+    </nav>
+
+    <!--CAROUSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide pointer-event">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 rounded-md" width="80" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" src="../navbar/aset/promo1.png">
+        </div>
+        <div class="carousel-item active">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 rounded-md" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" src="../navbar/aset/promo2.png">
         </div>
       </div>
-    </nav>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </body>
 </html>
