@@ -1,7 +1,7 @@
 /*Best Offer & Recommendations*/
 .Wraper {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     z-index: 2;
     position: relative;
     transform-style: preserve-3d;
@@ -110,7 +110,6 @@ body {
     text-shadow: 2px 2px 5px rgba(0,0,0,0,3), 5px 5px 70px rgba(255,255,255,0.5);
     transform: scale(1,1.1) translate(-50%, 10%);    
     z-index: 1;
-    background-color: aquamarine;
 }
 
 /*About Us*/
