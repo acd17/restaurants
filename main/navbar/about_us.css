@@ -87,7 +87,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url('../W09/Aset/Parallax3.jpg') center;
+    background: url('../aset/Parallax3.jpg') center;
     background-size: cover;
     transform: translateZ(-1px) scale(2.2);
 }
