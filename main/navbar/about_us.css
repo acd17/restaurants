@@ -1,8 +1,7 @@
-
 /*Best Offer & Recommendations*/
 .Wraper {
     width: 100vw;
-    height: 95vh;
+    height: 100vh;
     z-index: 2;
     position: relative;
     transform-style: preserve-3d;
@@ -21,11 +20,6 @@
     padding: 30px;
 }
 
-.TextBestOfferRecommendations {
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
 .WrapPromo, .WrapRecommendations {
     text-align: center;
     display: flex;
@@ -42,10 +36,6 @@
     margin: 20px 100px 10px 100px ;
 }
 
-.WrapPromoPertamaText, .WrapPromoKeduaText, .WrapRecommendationsPertamaText, .WrapRecommendationsKeduaText, .WrapRecommendationsKetigaText {
-    margin-top: 25px;
-}
-
 .Promo {
     width: 500px;
     border-radius: 20px;
@@ -60,7 +50,7 @@
 }
 
 .Recommendations {
-    width: 260px;
+    width: 250px;
     border-radius: 20px;
     transition: transform .2s;
 }
@@ -72,7 +62,7 @@
 
 html {
     overflow: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 body {
@@ -90,7 +80,6 @@ body {
     height: 80vh;
     position: relative;
     transform-style: preserve-3d;
-    z-index: -1;
 }
 
 .section1::before {
@@ -101,7 +90,6 @@ body {
     background: url('../aset/Parallax3.jpg') center;
     background-size: cover;
     transform: translateZ(-1px) scale(2.2);
-    z-index: -1;
 }
 
 .section2 {
@@ -148,11 +136,8 @@ body {
 }
 
 #JudulDeskripsiResto {
-    padding: 50px;
-}
-
-.TextNikuRamen {
-    font-size: 28px;
+    width: 550px;
+    padding: 30px;
 }
 
 /*Footer*/
@@ -161,14 +146,14 @@ footer {
     position: relative;
     color: white;
     background-color: rgb(79, 74, 74);
-    height: 250px;
 }
 
 #InformasiNiku {
     position: relative;
-    top: 30px;
+    top: 20px;
     width: 900px;
     height: 200px;
+    background-color: black;
     z-index: 1;
 }
 
@@ -248,17 +233,18 @@ footer {
 }
 
 /*GoTop*/
-.goTop {
-    position: relative;
-    left: 1800px;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    z-index: 1;
+#goTopButton {
+  position: relative;
+  left: 1800px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
 }
 
 /*Image Set*/
@@ -335,3 +321,4 @@ footer {
 .ButtonTambah {
     width: 50px;
 }
+
