@@ -13,19 +13,21 @@
             <h2 class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your
                 account</h2>
         </div>
-        <?php if (isset($_GET['error'])) {?>
-        <div class="flex mt-10 items-center p-4 mb-4 text-center text-md 64 text-red-800 rounded-lg bg-red-50  dark:text-red-400 sm:mx-auto sm:w-full sm:max-w-sm" 
-            role="alert">
-            <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor" viewBox="0 0 20 20">
-                <path
-                    d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-            </svg>
-            <span class="sr-only">Info</span>
-            <div>
-                <span class="font-medium"><?=$_GET['error']?></span>
+        <?php if (isset($_GET['error'])) { ?>
+            <div class="flex mt-10 items-center p-4 mb-4 text-center text-md 64 text-red-800 rounded-lg bg-red-50  dark:text-red-400 sm:mx-auto sm:w-full sm:max-w-sm"
+                role="alert">
+                <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                </svg>
+                <span class="sr-only">Info</span>
+                <div>
+                    <span class="font-medium">
+                        <?= $_GET['error'] ?>
+                    </span>
+                </div>
             </div>
-        </div>
         <?php } ?>
         <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
             <form class="space-y-6" action="check-login.php" method="post">
@@ -57,6 +59,12 @@
                     <option value="user">User</option>
                     <option value="admin">Admin</option>
                 </select>
+
+                <div class="flex items-center justify-between">
+                    <input type="text" class="form-control" name="captcha" id="captcha" placeholder="Enter Captcha">
+                    <img src="captcha.php" alt="PHP Captcha" class="ml-2 h-8">
+                </div>
+
                 <div>
                     <button type="submit"
                         class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign
