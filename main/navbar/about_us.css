@@ -1,3 +1,31 @@
+/* navbar */
+.navbar
+{
+    background-color: #897766;
+}
+
+.logos
+{
+    align-items: center;
+    justify-content: center;
+    left: 45%;
+    position: absolute;
+}
+
+/* carouseel */
+.carousel
+{
+    margin-top: 1%;
+    justify-content: center;
+    width: 100vw;
+}
+
+.carousel-inner
+{
+    width: 100vw;
+    height: 80vh;
+}
+
 /*Best Offer & Recommendations*/
 .Wraper {
     width: 100vw;
