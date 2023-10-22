@@ -5,6 +5,9 @@ module.exports = {
      extend: {
       width: {
         '64': '2rem',
+      },
+      backgroundImage: {
+        'login-niku': "url('/img/bakso.jpg')",
       }
      },
 },
