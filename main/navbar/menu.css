@@ -1,0 +1,136 @@
+.TextChasuRamenSpecial, .TextKatsuRamenSpecial {
+    text-align: center;
+    padding: 30px;
+}
+
+.TextRiceBowl, .TextSidesMenu, .TextDessert, .TextDrinks {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Chasu, .Katsu, .RiceBowl, .SidesMenu, .Dessert, .Drinks {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.Chasu:hover, .Katsu:hover, .RiceBowl:hover, .SidesMenu:hover, .Dessert:hover, .Drinks:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.WrapChasuRamenSpecial, .WrapKatsuRamenSpecial, .WrapRiceBowl, .WrapSidesMenu, .WrapDessert, .WrapDrinks {
+    display: flex;
+}
+
+.WrapOuterRamen, .WrapOuterRiceBowlSidesMenu, .WrapOuterDessertDrinks {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+.WrapChasuOriginalRamen, .WrapChasuCurryRamen, .WrapChasuMisoRamen, .WrapChasuSpicyRamen {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapKatsuOriginalRamen, .WrapKatsuCurryRamen, .WrapKatsuMisoRamen, .WrapKatsuSpicyRamen {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapNikuRiceBowl, .WrapEbiFuraiRiceBowl, .WrapKarageRiceBowl, .WrapBeefRiceBowl {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapGyoza, .WrapKarage, .WrapChickenKatsu, .WrapEbiFry {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapNikuMilkPudding, .WrapNikuDango, .WrapVanillaIceCream, .WrapNikuTaiyaki {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapOcha, .WrapMineralWater, .WrapLemonTea, .WrapLycheeTea {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.HargaButton {
+    display: flex;
+}
+
+.Harga {
+    width: 300px;
+}
+
+.ButtonTambah {
+    width: 50px;
+    background-color: #44403c;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+}
+
+#Invoice {
+    width: 800px;
+    height: auto;
+    background-color: #44403c;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    padding: 15px;
+    position: relative;
+    top: -600px;
+    bottom: 10px;
+    z-index: 1;
+    left: 550px;
+}
+
+#itemContainer, #itemElement {
+    display: flex;
+    text-align: center;
+}
+
+#exitButton {
+    margin-left: 750px;
+}
+
+#namaItem, #nama {
+    width: 500px;
+    text-align: left;
+}
+
+#Bill {
+    display: flex;
+    margin-left: 1600px;
+    text-align: center;
+    padding: 40px;
+    position: absolute;
+    top: 3600px;
+}
+
+#HargaTotal {
+    width: 200px;
+    height: 50px;
+    background-color: #4F483F;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Keranjang {
+    width: 50px;
+    background-color: #44403c;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
+}
