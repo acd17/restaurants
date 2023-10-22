@@ -216,11 +216,27 @@ document.addEventListener("DOMContentLoaded", function () {
           invoice.appendChild(itemElement);
       });
 
+      const itemTotalHarga = document.createElement("div");
+      itemTotalHarga.id = "itemTotalHarga";
+
+      const TotalHarga = document.createElement("div");
+      TotalHarga.textContent = "Total Harga";
+      TotalHarga.id = "TotalHarga";
+      itemTotalHarga.appendChild(TotalHarga);
+
+      const total = document.createElement("div");
+      total.textContent = `Rp ${hargaTotalValue}`;
+      total.id = "total";
+      itemTotalHarga.appendChild(total);
+
+      invoice.appendChild(itemTotalHarga);
+
       hargaTotal.textContent = `Rp ${hargaTotalValue}`;
   }
 
   keranjangButton.addEventListener("click", function () {
     invoice.style.display = "block";
+    document.body.style.backdropFilter = "blur(10px)";
   });
 
 });
