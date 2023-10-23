@@ -122,7 +122,7 @@ $hasil = $kunci->query($sql);
                         <tbody>";
             }
             echo "<tr class=''>
-                    <td class='align-middle text-center'><img class='gambar' src='../Admin/" . $row['gambar'] . "' class='rounded' width='360px'></td>
+                    <td class='align-middle text-center'><img class='gambar' src='../src/" . $row['gambar'] . "' class='rounded' width='360px'></td>
                     <td class='align-middle text-center'>" . $row['namaMenu'] . "</td>
                     <td class='align-middle text-center'>" . $row['harga'] . "</td>
                     <td class='align-middle text-center'>" . $row['deskripsiMenu'] . "</td>

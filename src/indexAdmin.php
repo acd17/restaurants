@@ -135,7 +135,7 @@ if(!isset($_SESSION['username']) &&
                                     </div>
                                     <br />
                                     <div id="btnAdd">
-                                        <button type="submit" class="btn btn-primary mb-3" style="padding-inline: 5%">Add</button>
+                                        <button id="buttonAdd" type="submit" class="btn btn-primary mb-3" style="padding-inline: 5%">Add</button>
                                     </div>
                                 </div>
                             </form>
