@@ -23,18 +23,21 @@ if(!isset($_SESSION['username']) &&
             <html>
             <head>
                 <title>HOME PAGE ADMIN</title>
+                <link rel="stylesheet" type="text/css" href="indexAdmin.css">
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
             </head>
 
             <body>
                 <a href="logoutAdmin.php">
-                    <button type="submit" class="btn btn-danger" id="logout">Logout</button>
+                    <div id="btnLogout">
+                        <button type="submit" class="btn btn-danger" id="logout">Logout</button>
+                    </div>
                 </a>
                 <div id="NamaRestoran">NIKU RAMEN</div>
 
                         <div class="container justify-content-center">
                         
-                        <div class="card-body">
+                        <div id="formContainer" class="card-body">
                             <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <div class="mb-1">
@@ -53,13 +56,16 @@ if(!isset($_SESSION['username']) &&
                                         <label class="form-label">Image</label>
                                         <input class="form-control" type="file" name="gambar" />
                                     </div>
-                                    <select name="dropdown">
+                                    <div id="kategoriContainer">
+                                    <select id="kategori" name="dropdown">
                                         <option value="$row['kategoriID']">RAMEN</option>
                                         <option value="$row['kategoriID']">RICE BOWL</option>
                                         <option value="$row['kategoriID']">SIDES MENU</option>
                                         <option value="$row['kategoriID']">DESSERT</option>
                                         <option value="$row['kategoriID']">DRINKS</option>
                                     </select>
+                                    </div>
+                                    <br />
                                     <div class="col-auto text-center">
                                         <button type="submit" class="btn btn-primary mb-3" style="padding-inline: 5%">Add</button>
                                     </div>
@@ -91,14 +97,14 @@ if(!isset($_SESSION['username']) &&
                             <tr>
                             <th class="align-middle text-center" scope="row"><?= $key++ ?></th>
                             <td class="align-middle text-center"><?= $row['namaMenu'] ?></td>
-                            <td class="align-middle text-center"><?= $row['harga'] ?></td>
+                            <td class="align-middle text-center">Rp <?= $row['harga'] ?></td>
                             <td class="align-middle text-center"><?= $row['deskripsiMenu'] ?></td>
-                            <td class="align-middle text-center"><img src="<?= $row['gambar'] ?>" class="rounded" width="360px"></td>
+                            <td class="align-middle text-center"><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></td>
                             <td class="align-middle text-center">
-                                <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>">Edit</a>
+                                <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">+</button></a>
                             </td>
                             <td class="align-middle text-center">
-                                <a id="underline" href="delete.php?menuID=<?= $row['menuID'] ?>">Delete</a>
+                                <a id="underline" href="delete.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">-</button></a>
                             </td>
                             </tr>
 
