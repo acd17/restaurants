@@ -29,7 +29,7 @@ if(!isset($_SESSION['username']) &&
                 <script src="https://cdn.tailwindcss.com"></script>
                 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-                <link rel="stylesheet" href="./indexuser.css">
+                <link rel="stylesheet" href="./indexAdmin.css">
                 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
             </head>
 
@@ -101,93 +101,94 @@ if(!isset($_SESSION['username']) &&
                 </nav>
 
                 <div class="section1">
-                <div class="container justify-content-center">
-                    <br />
-                    <div id="errorContainer"><div id="error"></div></div>
-                    <div id="formContainer" class="card-body">
-                        <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data" onsubmit="return form()">
-                            <div class="form-group">
-                                <div class="mb-1">
-                                    <label class="form-label">Menu Name</label>
-                                    <input class="form-control" type="text" name="namaMenu" />
+                    <div class="container justify-content-center">
+                        <br />
+                        <div id="errorContainer"><div id="error"></div></div>
+                        <div id="formContainer" class="card-body">
+                            <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data" onsubmit="return form()">
+                                <div class="form-group">
+                                    <div class="mb-1">
+                                        <label class="form-label">Menu Name</label>
+                                        <input class="form-control" type="text" name="namaMenu" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">Price</label>
+                                        <input class="form-control" type="text" name="harga" />
+                                    </div>
+                                    <div class="mb-1">
+                                        <label class="form-label">Menu Description</label>
+                                        <input class="form-control" type="text" name="deskripsiMenu" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Image</label>
+                                        <input class="form-control" type="file" name="gambar" />
+                                    </div>
+                                    <div id="kategoriContainer">
+                                    <select id="kategori" name="dropdown">
+                                        <option value="$row['kategoriID']">RAMEN</option>
+                                        <option value="$row['kategoriID']">RICE BOWL</option>
+                                        <option value="$row['kategoriID']">SIDES MENU</option>
+                                        <option value="$row['kategoriID']">DESSERT</option>
+                                        <option value="$row['kategoriID']">DRINKS</option>
+                                    </select>
+                                    </div>
+                                    <br />
+                                    <div id="btnAdd">
+                                        <button id="buttonAdd" type="submit">Add</button>
+                                    </div>
                                 </div>
-                                <div class="mb-1">
-                                    <label class="form-label">Price</label>
-                                    <input class="form-control" type="text" name="harga" />
-                                </div>
-                                <div class="mb-1">
-                                    <label class="form-label">Menu Description</label>
-                                    <input class="form-control" type="text" name="deskripsiMenu" />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Image</label>
-                                    <input class="form-control" type="file" name="gambar" />
-                                </div>
-                                <div id="kategoriContainer">
-                                <select id="kategori" name="dropdown">
-                                    <option value="$row['kategoriID']">RAMEN</option>
-                                    <option value="$row['kategoriID']">RICE BOWL</option>
-                                    <option value="$row['kategoriID']">SIDES MENU</option>
-                                    <option value="$row['kategoriID']">DESSERT</option>
-                                    <option value="$row['kategoriID']">DRINKS</option>
-                                </select>
-                                </div>
-                                <br />
-                                <div id="btnAdd">
-                                    <button id="buttonAdd" type="submit">Add</button>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
                     </div>
                 </div>
+
                 <div class="section2">
-                <div id="daftarMenu">DAFTAR MENU</div>
-                    <div id="tabelCenter">
-                        <table id="tabelContainer" class="table table-striped table-bordered">
-                        <thead id="colorRow1" class="thead-light">
-                            <tr>
-                            <th class="text-center" scope="col">Number</th>
-                            <th class="text-center" scope="col">Menu Name</th>
-                            <th class="text-center" scope="col">Price</th>
-                            <th class="text-center" scope="col">Menu Description</th>
-                            <th class="text-center" scope="col">Image</th>
-                            <th class="text-center" scope="col">Edit</th>
-                            <th class="text-center" scope="col">Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div id="section2">
+                    <div id="daftarMenu">DAFTAR MENU</div>
+                        <div id="tabelCenter">
+                            <table id="tabelContainer" class="table table-striped table-bordered">
+                            <thead id="colorRow1" class="thead-light">
+                                <tr>
+                                <th class="text-center" scope="col">Number</th>
+                                <th class="text-center" scope="col">Menu Name</th>
+                                <th class="text-center" scope="col">Price</th>
+                                <th class="text-center" scope="col">Menu Description</th>
+                                <th class="text-center" scope="col">Image</th>
+                                <th class="text-center" scope="col">Edit</th>
+                                <th class="text-center" scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                        <?php
-                                $key = 1;
-                            while($row = $hasil->fetch(PDO::FETCH_ASSOC)){
-                        ?>
+                            <?php
+                                    $key = 1;
+                                while($row = $hasil->fetch(PDO::FETCH_ASSOC)){
+                            ?>
 
-                            <tr>
-                            <th class="align-middle text-center" scope="row"><?= $key++ ?></th>
-                            <td class="align-middle text-center"><?= $row['namaMenu'] ?></td>
-                            <td class="align-middle text-center">Rp <?= $row['harga'] ?></td>
-                            <td class="align-middle text-center"><?= $row['deskripsiMenu'] ?></td>
-                            <td class="align-middle text-center"><div><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></div></td>
-                            <td class="align-middle text-center">
-                                <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">+</button></a>
-                            </td>
-                            <td class="align-middle text-center">
-                                <a id="underline" href="delete.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">-</button></a>
-                            </td>
-                            </tr>
+                                <tr>
+                                <th class="align-middle text-center" scope="row"><?= $key++ ?></th>
+                                <td class="align-middle text-center"><?= $row['namaMenu'] ?></td>
+                                <td class="align-middle text-center">Rp <?= $row['harga'] ?></td>
+                                <td class="align-middle text-center"><?= $row['deskripsiMenu'] ?></td>
+                                <td class="align-middle text-center"><div><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></div></td>
+                                <td class="align-middle text-center">
+                                    <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">+</button></a>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <a id="underline" href="delete.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">-</button></a>
+                                </td>
+                                </tr>
 
-                        <?php
-                            }
-                        ?>
+                            <?php
+                                }
+                            ?>
 
-                        </tbody>
+                            </tbody>
 
-                        </table>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                </div>
-                </div>
-
-                        <!-- <br /> -->
 
 
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

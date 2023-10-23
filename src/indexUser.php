@@ -7,7 +7,6 @@ $sql = "SELECT * FROM menu
 INNER JOIN kategori ON menu.kategoriID = kategori.kategoriID 
 ORDER BY menu.kategoriID, menuID asc;";
 
-
 $hasil = $kunci->query($sql);
 ?>
 
@@ -130,12 +129,12 @@ $hasil = $kunci->query($sql);
                 $flag = 1;
                 echo "<table id='daftarMenu' class='table table-striped'>
                         <thead>
-                            <h1>Kategori " . $row['namaKategori'] . "</h1>
+                            <div id='namaKategori'><b>" . $row['namaKategori'] . "</b></div>
                         </thead>
                         <tbody>";
             }
             echo '<div class="menu-item">';
-            echo '<img class="gambar" src="../Admin/' . $row['gambar'] . '" class="rounded" width="360px">';
+            echo '<img class="gambar" src="../src/' . $row['gambar'] . '" class="rounded" width="360px">';
             echo '<div class="item-details">';
             echo '<div class="item-name">' . $row['namaMenu'] . '</div>';
             echo '<div class="item-price">' . $row['harga'] . '</div>';

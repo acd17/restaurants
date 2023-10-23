@@ -28,7 +28,6 @@ body {
 .section1 {
     width: 100vw;
     height: 80vh;
-    position: relative;
     transform-style: preserve-3d;
 }
 
@@ -46,6 +45,12 @@ body {
     background-color: white;
     position: relative;
 }
+
+/* #section2 {
+    background-color: white;
+    width: 100vw;
+    height: 80vh;
+} */
 
 /*Form*/
 #errorContainer {
