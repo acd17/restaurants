@@ -163,6 +163,13 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
   function updateInvoice() {
+  //   items.forEach((item) => {
+  //     namaItemElement.textContent = `${item.nama}`;
+  //     hargaItemElement.textContent = `Rp ${item.harga}`;
+  //   });
+  //     hargaTotal.textContent = `Rp ${hargaTotalValue}`;
+  // }
+
       invoice.innerHTML = ""; 
       const itemContainer = document.createElement("div");
       itemContainer.id = "itemContainer";

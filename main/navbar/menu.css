@@ -87,7 +87,7 @@ body {
     background-color: #44403c;
     color: white;
     border-radius: 10px;
-    display: none;
+    /* display: none; */
     padding: 15px;
     position: relative;
     top: -600px;
