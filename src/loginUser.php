@@ -1,6 +1,6 @@
 <!doctype html>
 <html class="h-full">
-
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,7 +74,7 @@
 
             <p class="mt-10 text-center text-sm text-gray-500">
                 Not a member?
-                <a href="#" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Register here...</a>
+                <a href="signupUser.php" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Register here...</a>
             </p>
         </div>
     </div>
