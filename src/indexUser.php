@@ -133,13 +133,17 @@ $hasil = $kunci->query($sql);
                         </thead>
                         <tbody>";
             }
-            echo '<div class="menu-item">';
-            echo '<img class="gambar" src="../src/' . $row['gambar'] . '" class="rounded" width="360px">';
-            echo '<div class="item-details">';
-            echo '<div class="item-name">' . $row['namaMenu'] . '</div>';
-            echo '<div class="item-price">' . $row['harga'] . '</div>';
-            echo '<div class="item-description">' . $row['deskripsiMenu'] . '</div>';
-            echo '<button onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
+            echo '<div id="containerKategori"';
+            echo '<div id="menuDetailContainer">';
+            echo '<img id="gambar" src="../src/' . $row['gambar'] . '" class="rounded" width="360px">';
+            echo '<div id="itemDetail" class="item-details">';
+            echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
+            echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
+            echo '<div id="HargaButton">';
+            echo '<div id="itemHarga">' . $row['harga'] . '</div>';
+            echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
+            echo '</div>';
+            echo '</div>';
             echo '</div>';
             echo '</div>';
         }

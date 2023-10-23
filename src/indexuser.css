@@ -126,7 +126,45 @@ body {
     padding: 30px;
 }
 
-/*Nama Kategori*/
+/*Nama Kategori & Value Item*/
 #namaKategori {
     font-size: 32px;
 }
+
+#menuDetailContainer {
+    width: 300px;
+}
+
+#gambar {
+    width: 300px;
+}
+
+#itemName {
+    width: 300px;
+    text-align: center;
+}
+
+#deskripsiMenu {
+    width: 300px;
+    text-align: center;
+} 
+
+#buttonTambah {
+    background-color: rgba(79, 72, 63);
+    color: white;
+    width: 35px;
+    border-radius: 50%;
+}
+
+#HargaButton {
+    display: flex;
+    padding: 5px;
+}
+
+#itemHarga {
+    margin-right: 210px;
+}
+
+/* #containerKategori {
+    display: flex;
+} */
