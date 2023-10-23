@@ -1,0 +1,37 @@
+/* navbar */
+.navbar
+{
+    background-color: #897766;
+}
+
+.logos
+{
+    align-items: center;
+    justify-content: center;
+    left: 45%;
+    position: absolute;
+}
+
+.logoNiku
+{
+    margin-top: 1%;
+    top: 10%;
+    left: 45%;
+    transform: translate(0%, 0%);
+    position: absolute;
+}
+/* carouseel */
+
+.carousel
+{
+    margin-top: 1%;
+    justify-content: center;
+    width: 100vw;
+}
+
+.carousel-inner
+{
+    width: 100vw;
+    height: 80vh;
+}
+
