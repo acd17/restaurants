@@ -134,7 +134,7 @@ $hasil = $kunci->query($sql);
                         <tbody>";
             }
             echo '<div id="wrapperOuter"';
-            echo '<div class="containerKategori">';
+            echo '<div class="containerKategori" onclick="showDetail(\'itemDetail\')">';
             echo '<div id="menuGambarNama">';
             echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
             echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
@@ -186,16 +186,19 @@ $hasil = $kunci->query($sql);
             window.open('bill.php?cartData=' + encodeURIComponent(cartData));
         }
 
-        const clickableDiv = document.querySelector('.containerKategori');
-        const hiddenDiv = document.querySelector('.itemDetail');
+        function showDetail(){
+            const clickableDiv = document.querySelector('.containerKategori');
+            const hiddenDiv = document.querySelector('.itemDetail');
 
-        clickableDiv.addEventListener('click', function() {
-            if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
-                hiddenDiv.style.display = 'block';
-            } else {
-                hiddenDiv.style.display = 'none';
-            }
-        });
+            clickableDiv.addEventListener('click', function() {
+                if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
+                    hiddenDiv.style.display = 'block';
+                } else {
+                    hiddenDiv.style.display = 'none';
+                }
+            });
+        }
+
     </script>
 </body>
 </html>

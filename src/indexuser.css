@@ -172,7 +172,7 @@ body {
 }
 
 .itemDetail {
-    display: none;
+    /* display: none; */
 }
 
 .containerKategori {
@@ -181,7 +181,7 @@ body {
     cursor: pointer;
 }
 
-/* #wrapperOuter {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-} */
+#wrapperOuter {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr); */
+}
