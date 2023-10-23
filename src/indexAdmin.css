@@ -72,10 +72,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 200;
 }
 
-
 /*Value Table*/
+#colorRow1 {
+    background-color: #897766;
+    color: white;
+}
+
 #gambar {
     width: 200px;
 }
@@ -83,9 +88,9 @@ body {
 #btnPlusMinus {
     background-color: #4F483F;
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     border-radius: 50%;
-    width: 30px;
+    width: 35px;
 }
 
 

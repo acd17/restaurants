@@ -145,7 +145,7 @@ if(!isset($_SESSION['username']) &&
                         <br />
                         <div id="daftarMenu">DAFTAR MENU</div>
                         <table class="table table-striped table-bordered">
-                        <thead class="thead-light">
+                        <thead id="colorRow1" class="thead-light">
                             <tr>
                             <th class="text-center" scope="col">Number</th>
                             <th class="text-center" scope="col">Menu Name</th>
