@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Button Logout*/
+#btnLogout {
+    margin-left: 1750px;
+}
+
+/*Form*/
+#errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#error {
+    width: 500px;
+    background-color: #897766;
+    color: white;
+}
+
+#formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addMenu {
+    width: 500px;
+}
+
+#kategoriContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kategori {
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #897766;
+    color: white;
+}
+
+#btnAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#buttonAdd {
+    width: 100px;
+    background-color: #4F483F;
+    border-radius: 20px;
+    color: white;
+}
+
+#daftarMenu {
+    font-size: 32px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Value Table*/
+#gambar {
+    width: 200px;
+}
+
+#btnPlusMinus {
+    background-color: #4F483F;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 30px;
+}
+
+
