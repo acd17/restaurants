@@ -15,6 +15,18 @@ body {
 }
 
 /*Form*/
+#errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#error {
+    width: 500px;
+    background-color: #897766;
+    color: white;
+}
+
 #formContainer {
     display: flex;
     justify-content: center;
@@ -48,9 +60,19 @@ body {
 
 #buttonAdd {
     width: 100px;
+    background-color: #4F483F;
+    border-radius: 20px;
+    color: white;
 }
 
-
+#daftarMenu {
+    font-size: 32px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*Value Table*/

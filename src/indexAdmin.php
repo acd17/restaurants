@@ -104,9 +104,10 @@ if(!isset($_SESSION['username']) &&
 
 
                         <div class="container justify-content-center">
-                        
+                        <br />
+                        <div id="errorContainer"><div id="error"></div></div>
                         <div id="formContainer" class="card-body">
-                            <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data">
+                            <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data" onsubmit="return form()">
                                 <div class="form-group">
                                     <div class="mb-1">
                                         <label class="form-label">Menu Name</label>
@@ -135,14 +136,14 @@ if(!isset($_SESSION['username']) &&
                                     </div>
                                     <br />
                                     <div id="btnAdd">
-                                        <button id="buttonAdd" type="submit" class="btn btn-primary mb-3" style="padding-inline: 5%">Add</button>
+                                        <button id="buttonAdd" type="submit">Add</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
                         <br />
-                        <h2 class="text-center"><b>DAFTAR MENU</b></h2>
+                        <div id="daftarMenu">DAFTAR MENU</div>
                         <table class="table table-striped table-bordered">
                         <thead class="thead-light">
                             <tr>
