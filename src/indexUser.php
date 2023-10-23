@@ -20,13 +20,13 @@ $hasil = $kunci->query($sql);
 <body>
     <?php
     session_start();
-    if(!isset($_SESSION['email']) &&
-        !isset($_SESSION['passUser'])) {
-            echo '<a href="login_form.php">
+    if(!isset($_SESSION['username']) &&
+        !isset($_SESSION['password'])) {
+            echo '<a href="check-login.php">
                 <button type="submit" class="btn btn-danger" id="logout">Login</button>
                 </a>';
     } else {
-        echo '<a href="logout.php">
+        echo '<a href="logoutUser.php">
             <button type="submit" class="btn btn-danger" id="logout">Logout</button>
         </a>';
     }

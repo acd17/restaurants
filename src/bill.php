@@ -7,11 +7,11 @@ session_start();
 $cartData = urldecode($_GET['cartData']);
 $items = json_decode($cartData, true);
 
-if(!isset($_SESSION['email']) &&
-    !isset($_SESSION['passUser'])){
+if(!isset($_SESSION['username']) &&
+    !isset($_SESSION['password'])){
         echo "You don't have access to this page";
         ?>
-        <a href="login_form.php">Login</a>
+        <a href="loginUser.php">Login</a>
         <?php
     }else{
         ?>

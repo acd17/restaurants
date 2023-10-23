@@ -40,5 +40,5 @@ var_dump($_FILES);
     $fail->getMessage();
 }
 
-header("Location: index.php");
+header("Location: indexAdmin.php");
 exit; 

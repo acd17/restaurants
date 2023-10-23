@@ -11,11 +11,11 @@ $kategorihasil = $kunci->query($katgorisql);
 session_start();
 // require_once('db.php');
 
-if(!isset($_SESSION['namaAdmin']) &&
-    !isset($_SESSION['adminID'])){
+if(!isset($_SESSION['username']) &&
+    !isset($_SESSION['password'])){
         echo "You don't have access to this page";
         ?>
-        <a href="login_form.php">Login</a>
+        <a href="check-login.php">Login</a>
         <?php
     }else{
         ?>
@@ -27,7 +27,7 @@ if(!isset($_SESSION['namaAdmin']) &&
             </head>
 
             <body>
-                <a href="logout.php">
+                <a href="logoutAdmin.php">
                     <button type="submit" class="btn btn-danger" id="logout">Logout</button>
                 </a>
                 <div id="NamaRestoran">NIKU RAMEN</div>

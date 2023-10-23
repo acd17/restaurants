@@ -39,5 +39,5 @@ switch($file_ext){
         default: echo "Anda hanya bisa upload file gambar.";
     }
 
-header("Location: index.php");
+header("Location: indexAdmin.php");
 exit; 

@@ -45,9 +45,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
                     if ($row['role'] == 'admin') {
-                        header("location: admin_dashboard.php");
+                        header("location: indexAdmin.php");
                     } else {
-                        header("location: user_dashboard.php");
+                        header("location: indexUser.php");
                     }
                 } else {
                     header("location: loginUser.php?error=Incorrect Role");
