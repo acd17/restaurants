@@ -177,6 +177,7 @@ body {
 
 .containerKategori {
     width: 300px;
+    display: block;
     cursor: pointer;
 }
 

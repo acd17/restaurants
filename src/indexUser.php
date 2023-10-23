@@ -134,7 +134,7 @@ $hasil = $kunci->query($sql);
                         <tbody>";
             }
             echo '<div id="wrapperOuter"';
-            echo '<div class="containerKategori" onclick="munculDetail(\'itemDetail\')">';
+            echo '<div class="containerKategori">';
             echo '<div id="menuGambarNama">';
             echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
             echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
@@ -189,14 +189,6 @@ $hasil = $kunci->query($sql);
         const clickableDiv = document.querySelector('.containerKategori');
         const hiddenDiv = document.querySelector('.itemDetail');
 
-        // function munculDetail(){
-        //     var div = document.getElementById(itemDetail);
-        //     if(div.style.display === "none" || div.style.display === "") {
-        //         div.style.display = "block";
-        //     } else {
-        //         div.style.display = "none";
-        //     }
-        // }
         clickableDiv.addEventListener('click', function() {
             if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
                 hiddenDiv.style.display = 'block';
