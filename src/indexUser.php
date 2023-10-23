@@ -14,7 +14,7 @@ $hasil = $kunci->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HOME PAGE ADMIN</title>
+    <title>HOME PAGE USER</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title>NIKU-RAMEN</title>
     <link rel="website icon" type="png" href="../aset/logo.png" >

@@ -33,6 +33,21 @@ body {
 
 #kategori {
     width: 500px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #897766;
+    color: white;
+}
+
+#btnAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#buttonAdd {
+    width: 100px;
 }
 
 
