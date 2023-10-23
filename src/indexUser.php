@@ -73,7 +73,7 @@ $hasil = $kunci->query($sql);
                             echo '<a href="logoutUser.php" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1">Logout</a>';
                         }
                     ?>
-                   <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign Out</a>
+                   <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign Out</a> -->
                    <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a> -->
                </div>
            </div>
@@ -121,18 +121,18 @@ $hasil = $kunci->query($sql);
                         </thead>
                         <tbody>";
             }
-            echo "<tr class=''>
-                    <td class='align-middle text-center'><img class='gambar' src='../Admin/" . $row['gambar'] . "' class='rounded' width='360px'></td>
-                    <td class='align-middle text-center'>" . $row['namaMenu'] . "</td>
-                    <td class='align-middle text-center'>" . $row['harga'] . "</td>
-                    <td class='align-middle text-center'>" . $row['deskripsiMenu'] . "</td>
-                    <button onclick='tambahItem(\"" . $row['namaMenu'] . "\", " . $row['harga'] . ")'>+</button>
-                </tr>";
+            echo '<div class="menu-item">';
+            echo '<img class="gambar" src="../Admin/' . $row['gambar'] . '" class="rounded" width="360px">';
+            echo '<div class="item-details">';
+            echo '<div class="item-name">' . $row['namaMenu'] . '</div>';
+            echo '<div class="item-price">' . $row['harga'] . '</div>';
+            echo '<div class="item-description">' . $row['deskripsiMenu'] . '</div>';
+            echo '<button onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
+            echo '</div>';
+            echo '</div>';
         }
     ?>
-    <div class="menulist">
-        
-    </div>
+   
     </tbody></table>
     <div id="Invoice"></div>
         <div id="Bill">
