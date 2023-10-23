@@ -4,14 +4,47 @@
     font-family: "Montserrat", sans-serif;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-}
-
 /*Button Logout*/
 #btnLogout {
     margin-left: 1750px;
+}
+
+/*Parallax1*/
+
+html {
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.section1 {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.section1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('Parallax3.jpg') center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+}
+
+.section2 {
+    background-color: white;
+    position: relative;
 }
 
 /*Form*/
@@ -34,7 +67,11 @@ body {
 }
 
 #addMenu {
-    width: 500px;
+    width: 550px;
+    background-color: rgba(79, 72, 63, 0.9);
+    padding: 50px;
+    border-radius: 50px;
+    color: white;
 }
 
 #kategoriContainer {
@@ -60,7 +97,7 @@ body {
 
 #buttonAdd {
     width: 100px;
-    background-color: #4F483F;
+    background-color: #897766;
     border-radius: 20px;
     color: white;
 }
@@ -73,12 +110,29 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 200;
+    z-index: 1;
 }
 
 /*Value Table*/
+/* #tabelCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tabelContainer {
+    width: 1200px;
+} */
+
 #colorRow1 {
     background-color: #897766;
     color: white;
+}
+
+#imageCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #gambar {

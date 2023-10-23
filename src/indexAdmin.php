@@ -100,51 +100,50 @@ if(!isset($_SESSION['username']) &&
                 </div>
                 </nav>
 
-
-
-
-                        <div class="container justify-content-center">
-                        <br />
-                        <div id="errorContainer"><div id="error"></div></div>
-                        <div id="formContainer" class="card-body">
-                            <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data" onsubmit="return form()">
-                                <div class="form-group">
-                                    <div class="mb-1">
-                                        <label class="form-label">Menu Name</label>
-                                        <input class="form-control" type="text" name="namaMenu" />
-                                    </div>
-                                    <div class="mb-1">
-                                        <label class="form-label">Price</label>
-                                        <input class="form-control" type="text" name="harga" />
-                                    </div>
-                                    <div class="mb-1">
-                                        <label class="form-label">Menu Description</label>
-                                        <input class="form-control" type="text" name="deskripsiMenu" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Image</label>
-                                        <input class="form-control" type="file" name="gambar" />
-                                    </div>
-                                    <div id="kategoriContainer">
-                                    <select id="kategori" name="dropdown">
-                                        <option value="$row['kategoriID']">RAMEN</option>
-                                        <option value="$row['kategoriID']">RICE BOWL</option>
-                                        <option value="$row['kategoriID']">SIDES MENU</option>
-                                        <option value="$row['kategoriID']">DESSERT</option>
-                                        <option value="$row['kategoriID']">DRINKS</option>
-                                    </select>
-                                    </div>
-                                    <br />
-                                    <div id="btnAdd">
-                                        <button id="buttonAdd" type="submit">Add</button>
-                                    </div>
+                <div class="section1">
+                <div class="container justify-content-center">
+                    <br />
+                    <div id="errorContainer"><div id="error"></div></div>
+                    <div id="formContainer" class="card-body">
+                        <form id="addMenu" action="form_InsertData.php" method="post" enctype="multipart/form-data" onsubmit="return form()">
+                            <div class="form-group">
+                                <div class="mb-1">
+                                    <label class="form-label">Menu Name</label>
+                                    <input class="form-control" type="text" name="namaMenu" />
                                 </div>
-                            </form>
-                        </div>
-
-                        <br />
-                        <div id="daftarMenu">DAFTAR MENU</div>
-                        <table class="table table-striped table-bordered">
+                                <div class="mb-1">
+                                    <label class="form-label">Price</label>
+                                    <input class="form-control" type="text" name="harga" />
+                                </div>
+                                <div class="mb-1">
+                                    <label class="form-label">Menu Description</label>
+                                    <input class="form-control" type="text" name="deskripsiMenu" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Image</label>
+                                    <input class="form-control" type="file" name="gambar" />
+                                </div>
+                                <div id="kategoriContainer">
+                                <select id="kategori" name="dropdown">
+                                    <option value="$row['kategoriID']">RAMEN</option>
+                                    <option value="$row['kategoriID']">RICE BOWL</option>
+                                    <option value="$row['kategoriID']">SIDES MENU</option>
+                                    <option value="$row['kategoriID']">DESSERT</option>
+                                    <option value="$row['kategoriID']">DRINKS</option>
+                                </select>
+                                </div>
+                                <br />
+                                <div id="btnAdd">
+                                    <button id="buttonAdd" type="submit">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="section2">
+                <div id="daftarMenu">DAFTAR MENU</div>
+                    <div id="tabelCenter">
+                        <table id="tabelContainer" class="table table-striped table-bordered">
                         <thead id="colorRow1" class="thead-light">
                             <tr>
                             <th class="text-center" scope="col">Number</th>
@@ -168,7 +167,7 @@ if(!isset($_SESSION['username']) &&
                             <td class="align-middle text-center"><?= $row['namaMenu'] ?></td>
                             <td class="align-middle text-center">Rp <?= $row['harga'] ?></td>
                             <td class="align-middle text-center"><?= $row['deskripsiMenu'] ?></td>
-                            <td class="align-middle text-center"><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></td>
+                            <td class="align-middle text-center"><div id="imageCenter"><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></div></td>
                             <td class="align-middle text-center">
                                 <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">+</button></a>
                             </td>
@@ -184,7 +183,12 @@ if(!isset($_SESSION['username']) &&
                         </tbody>
 
                         </table>
-                    </div>
+                </div>
+                </div>
+                </div>
+
+                        <!-- <br /> -->
+
 
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
