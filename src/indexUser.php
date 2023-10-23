@@ -133,19 +133,21 @@ $hasil = $kunci->query($sql);
                         </thead>
                         <tbody>";
             }
-            echo '<div id="containerKategori"';
-            echo '<div id="menuDetailContainer">';
-            echo '<img id="gambar" src="../src/' . $row['gambar'] . '" class="rounded" width="360px">';
-            echo '<div id="itemDetail" class="item-details">';
+            echo '<div id="wrapperOuter"';
+            echo '<div class="containerKategori" onclick="munculDetail(\'itemDetail\')">';
+            echo '<div id="menuGambarNama">';
+            echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
             echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
+            echo '</div>';
+            echo '<div class="itemDetail">';
             echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
             echo '<div id="HargaButton">';
-            echo '<div id="itemHarga">' . $row['harga'] . '</div>';
+            echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
             echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
             echo '</div>';
             echo '</div>';
             echo '</div>';
-            echo '</div>';
+            
         }
     ?>
    
@@ -183,6 +185,25 @@ $hasil = $kunci->query($sql);
             var cartData = JSON.stringify(items);
             window.open('bill.php?cartData=' + encodeURIComponent(cartData));
         }
+
+        const clickableDiv = document.querySelector('.containerKategori');
+        const hiddenDiv = document.querySelector('.itemDetail');
+
+        // function munculDetail(){
+        //     var div = document.getElementById(itemDetail);
+        //     if(div.style.display === "none" || div.style.display === "") {
+        //         div.style.display = "block";
+        //     } else {
+        //         div.style.display = "none";
+        //     }
+        // }
+        clickableDiv.addEventListener('click', function() {
+            if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {
+                hiddenDiv.style.display = 'block';
+            } else {
+                hiddenDiv.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>

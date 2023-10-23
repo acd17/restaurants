@@ -137,6 +137,7 @@ body {
 
 #gambar {
     width: 300px;
+    border-radius: 10%;
 }
 
 #itemName {
@@ -162,9 +163,24 @@ body {
 }
 
 #itemHarga {
-    margin-right: 210px;
+    background-color: rgba(79, 72, 63);
+    color: white;
+    border-radius: 10px;
+    width: 235px;
+    text-align: center;
+    margin-right: 15px;
 }
 
-/* #containerKategori {
-    display: flex;
+.itemDetail {
+    display: none;
+}
+
+.containerKategori {
+    width: 300px;
+    cursor: pointer;
+}
+
+/* #wrapperOuter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 } */
