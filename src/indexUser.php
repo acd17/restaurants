@@ -86,22 +86,35 @@ $hasil = $kunci->query($sql);
       </div>
     </nav>
 
+    <div class="section1">
+    </div>
+    <div class="section2">
+        <div class="text">
 
-    <?php
-    
-    // if(!isset($_SESSION['username']) &&
-    //     !isset($_SESSION['password'])) {
-    //         echo '<a href="check-login.php">
-    //             <button type="submit" class="btn btn-danger" id="logout">Login</button>
-    //             </a>';
-    // } else {
-    //     echo '<a href="logoutUser.php">
-    //         <button type="submit" class="btn btn-danger" id="logout">Logout</button>
-    //     </a>';
-    // }
-    ?>
-    <!-- <div id="NamaRestoran">NIKU RAMEN</div> -->
-    
+            <div id="AboutUs">ABOUT US</div>
+            <div id="RestoJudulDeskripsi">
+                <img src="Niku Ramen Resto.png" class="Restoran">
+                <div id="JudulDeskripsiResto">
+                    <h2>Niku Ramen</h2>
+                    <p>Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di 
+                        Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu 
+                        yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya yang
+                        lezat nih. Niku Ramen juga merupakan tempat yang cocok banget buat kamu
+                        yang mau bersantai-santai karena suasananya yang sangat nyaman, ditambah lagi
+                        restoran kami juga memiliki fasilitas WIFI yang pas untuk kamu yang mau bermain game,
+                        kerja, nongkrong, dan aktivitas lainnya. 
+                    </p>
+                    <p>
+                        Pilihan ramen sangat beragam, mulai dari daging ayam hingga daging sapi
+                        ditambah dengan kuah yang sangat nikmat. Kuah ramen pun sangat beragam,
+                        kamu bisa memilih rasa kuah sesuka keinginanmu. Pastinya harga
+                        makanan dan minuman di Niku Ramen juga sangat terjangkau ya ^_^.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php
         $flag = 0;
         $cId = 1;
@@ -143,6 +156,7 @@ $hasil = $kunci->query($sql);
             </button>
         </div>
     </div>
+    
 
     <script>
         let hargaTotalValue = 0;

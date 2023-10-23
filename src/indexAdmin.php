@@ -167,7 +167,7 @@ if(!isset($_SESSION['username']) &&
                             <td class="align-middle text-center"><?= $row['namaMenu'] ?></td>
                             <td class="align-middle text-center">Rp <?= $row['harga'] ?></td>
                             <td class="align-middle text-center"><?= $row['deskripsiMenu'] ?></td>
-                            <td class="align-middle text-center"><div id="imageCenter"><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></div></td>
+                            <td class="align-middle text-center"><div><img id="gambar" src="<?= $row['gambar'] ?>" class="rounded" width="360px"></div></td>
                             <td class="align-middle text-center">
                                 <a id="underline" href="form_edit.php?menuID=<?= $row['menuID'] ?>"><button id="btnPlusMinus">+</button></a>
                             </td>
