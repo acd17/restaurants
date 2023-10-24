@@ -38,3 +38,51 @@
     <input type="submit" name="submit" value="Update password">
 </form>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgotpassword.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="password-container">
+            <img src="../main/aset/logo.png" alt="test">
+            <h1>Enter your email to reset password</h1>
+            <form method="POST">
+                <input type="text" name="email" placeholder="Email" autocomplete="off" class="">
+                <br>
+            </form>
+        </div>
+    </div>
+    <button id="btn" type="submit" name="submit" value="Update password">
+        <p id="btnText">Send</p>
+        <div class="check-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        </div>
+    </button>
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        btn.onclick = () => {
+            btnText.innerHTML = "Check email";
+            btn.classList.add("active");
+
+            // Menunda pengalihan halaman selama 2 detik (misalnya)
+            setTimeout(function() {
+                // Di sini Anda dapat melakukan pengalihan ke fungsi PHP atau URL yang diinginkan
+                // Menggunakan JavaScript window.location atau AJAX, atau apa pun yang sesuai
+                window.location.href = "resetPassword.php";
+            }, 2000); // 2000 milidetik = 2 detik
+        };
+    </script>
+</body>
+
+</html>
