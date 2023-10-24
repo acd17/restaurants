@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2023 at 11:03 AM
+-- Generation Time: Oct 24, 2023 at 05:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -95,15 +95,28 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`menuID`, `gambar`, `namaMenu`, `deskripsiMenu`, `harga`, `kategoriID`) VALUES
-(13, 'gambar/ChasuCurry.png', 'CHASU ORIGINAL RAMEN', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 45000, 1),
-(14, NULL, 'NIKU RICE BOWL', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 60000, 2),
-(15, NULL, 'GYOZA', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 30000, 3),
-(16, NULL, 'NIKU MILK PUDDING', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 25000, 4),
-(17, NULL, 'OCHA', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 20000, 5),
-(18, NULL, 'NIKU RICE BOWL 2', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 60000, 2),
-(19, NULL, 'NIKU RICE BOWL 3', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 60000, 2),
-(20, NULL, 'OCHA 2', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 20000, 5),
-(23, 'gambar/ChasuCurry.png', 'Niku Ramen', 'Niku ramen enak banget', 50000, NULL);
+(24, 'gambar/ChasuOri.jpeg', 'CHASU ORIGINAL RAMEN', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 40000, 1),
+(25, 'gambar/ChasuCurry.png', 'CHASU CURRY RAMEN', 'Ramen keriting/lurus dengan kuah asin dan segar, beserta komponen lainnya', 40000, 1),
+(26, 'gambar/NikuRiceBowl.jpg', 'NIKU RICE BOWL', 'Ini adalah hidangan nasi dengan potongan daging, seringkali disajikan dengan saus dan bumbu yang beragam.', 34000, 2),
+(27, 'gambar/EbiFurai.png', 'EBI FURAI RICE BOWL', 'Hidangan nasi dengan udang ebi yang dilapisi tepung roti dan digoreng hingga renyah.', 37000, 2),
+(28, 'gambar/Gyoza.jpg', 'GYOZA', 'Gyoza adalah pangsit Jepang yang diisi dengan daging dan sayuran, kemudian digoreng hingga renyah.', 30000, 3),
+(29, 'gambar/Karage.jpg', 'KARAGE', 'Potongan ayam yang digoreng hingga renyah dalam adonan berempah.', 20000, 3),
+(30, 'gambar/Dango.jpg', 'NIKU DANGO', 'Dango adalah kue Jepang berbentuk bulat yang disajikan dengan saus manis. \"Niku\" mungkin merujuk pada tambahan daging dalam hidangan ini.', 20000, 4),
+(31, 'gambar/VanillaIceCream.jpg', 'VANILLA ICE CREAM', 'Es krim rasa vanila, rasa klasik yang lezat.', 8000, 4),
+(32, 'gambar/Ocha.png', 'OCHA', 'Teh hijau, minuman yang sangat populer di Jepang.', 4000, 5),
+(33, 'gambar/MineralWater.jpg', 'MINERAL WATER', 'Air mineral adalah air tanpa rasa tambahan, bersifat murni dan menyegarkan.', 3000, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `resetpassword`
+--
+
+CREATE TABLE `resetpassword` (
+  `id` int(11) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -164,10 +177,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `name`, `jenis_kelamin`, `first_name`, `last_name`, `tanggal_lahir`, `email`) VALUES
-(1, 'admin', 'niku@ramen2023', 'admin', 'admin', 'male', '', '', '0000-00-00', 'niku@ramen.com'),
-(2, 'jose', 'jose@123', 'user', 'jous', 'male', '', '', '0000-00-00', 'joseandreaslie@gmail.com'),
-(4, 'vinka', 'vinka', 'user', 'vin ka', 'male', 'vin', 'ka', '2003-12-19', 'vinka@gmail.com'),
-(5, 'VINIK', 'ken', 'user', 'kevin ken', 'male', 'kevin', 'ken', '2003-12-19', 'kevinken1912@icloud.com');
+(1, 'admin', 'a496e620685bcde764947df82e590232', 'admin', 'admin', 'male', '', '', '0000-00-00', 'niku@gmail.com'),
+(2, 'jose', 'jose@123', 'user', 'jous', 'male', '', '', '0000-00-00', 'jose@gmail.com'),
+(4, 'vinka', 'vinka', 'user', 'vin ka', 'male', 'vin', 'ka', '2003-12-19', 'BLABLABLA@gmail.com'),
+(9, 'ARIKULIE', '25d55ad283aa400af464c76d713c07ad', 'user', 'ARIKULIE ARIKULIE', 'male', 'ARIKULIE', 'ARIKULIE', '2023-10-04', 'jose.lie2208@gmail.com'),
+(10, 'BrianLie', 'ace9c40e82b3ca895369a8307f673695', 'user', 'Brian Lie', 'male', 'Brian', 'Lie', '2023-10-04', 'arikulie@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -200,6 +214,12 @@ ALTER TABLE `menu`
   ADD KEY `kategoriID` (`kategoriID`);
 
 --
+-- Indexes for table `resetpassword`
+--
+ALTER TABLE `resetpassword`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
@@ -217,8 +237,8 @@ ALTER TABLE `user`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -240,7 +260,13 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menuID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `menuID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `resetpassword`
+--
+ALTER TABLE `resetpassword`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
@@ -258,7 +284,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
@@ -287,9 +313,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE TABLE resetPassword (
-  id INT(11) AUTO_INCREMENT NOT NULL PRIMARY KEY ,
-  code VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL
-); 
