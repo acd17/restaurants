@@ -12,9 +12,37 @@ session_start();
 
 if(!isset($_SESSION['username']) &&
     !isset($_SESSION['password'])){
-        echo "<div id='accessLogin'> You don't have access to this page </div>";
+        echo "<div id='accessLogin' 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;'>";
+        echo "<div 
+        style ='background-color: #897766; 
+        color: white;
+        font-size: 36px;
+        text-align: center;
+        width: 550px;
+        height: 50px;
+        border-radius: 20px;
+        '> 
+        You don't have access to this page </div></div>";
         ?>
-        <a href="check-login.php">Login</a>
+        <div 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        '>
+        <a href="check-login.php" style=''>
+            <button 
+            style='width: 150px;
+            background-color: #4F483F;
+            border-radius: 20px;
+            color: white;
+            font-size: 28px;'
+            >Login</button>
+        </a>
+        </div>
         <?php
     }else{
         ?>
