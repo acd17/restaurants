@@ -189,9 +189,6 @@ body {
     align-items: center;
     text-align: center;
     margin-bottom: 70px;
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 #menuDetailContainer {
@@ -303,8 +300,6 @@ body {
 
 #wrapperOuter {
     width: 1000px;
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
 }
 
 

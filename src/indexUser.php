@@ -30,31 +30,16 @@ $hasil = $kunci->query($sql);
         <div class="relative flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div x-data="{ sidebarOpen: false }">
-              <!-- Tombol untuk membuka/menutup sidebar -->
-              <!-- <button @click="sidebarOpen = !sidebarOpen" class="p-2">
-                  <img class="h-8 w-auto" src="../main/aset/menu-svgrepo-com.svg" alt="Your Company">
-              </button> -->
-          
-              <!-- Sidebar -->
-              <!-- <div :class="{'translate-x-0': sidebarOpen, '-translate-x-full': !sidebarOpen}" class="fixed left-0 top-0 h-full w-64 bg-stone-600 opacity-95 transition-transform duration-300 ease-in-out transform z-10">
-                  
-                  <ul class="p-4">
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Best Offers</a></li>
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Recommendation</a></li>
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">About Us</a></li>
-                      <li><a href="menu.html" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Menu</a></li>
-                  </ul>
-              </div> -->
-          </div>          
-           <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
-            <div class="logoNiku sm:block items-center mt-0">
-               <div class="logos flex flex-col items-center">
-                  <img class="h-8 w-auto" src="../main/aset/logo.png" alt="logo">
-                  <a class="font-bold text-stone-700">NIKURAMEN</a>
-              </div>
+            </div>          
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
+                <div class="logoNiku sm:block items-center mt-0">
+                <div class="logos flex flex-col items-center">
+                    <img class="h-8 w-auto" src="../main/aset/logo.png" alt="logo">
+                    <a class="font-bold text-stone-700">NIKURAMEN</a>
+                </div>
+                </div>
             </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
     
             <!-- Profile dropdown -->
@@ -72,8 +57,6 @@ $hasil = $kunci->query($sql);
                             echo '<a href="logoutUser.php" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1">Logout</a>';
                         }
                     ?>
-                   <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign Out</a> -->
-                   <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a> -->
                </div>
            </div>
            
@@ -174,7 +157,6 @@ $hasil = $kunci->query($sql);
                 echo '</div>';
             echo '</div>';
             echo '</div>';
-            
         }
     ?>
    
