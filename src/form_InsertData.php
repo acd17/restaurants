@@ -5,19 +5,21 @@ $filename = $_FILES['gambar']['name'];
 $namaMenu = $_POST['namaMenu'];
 $harga = $_POST['harga'];
 $deskripsiMenu = $_POST['deskripsiMenu'];
+$kategoriID = $_POST['dropdown'];
 $gambar = "gambar/" . $filename;
+var_dump($_POST);
 
 //1
 $dsn = "mysql:host=localhost;dbname=nikuramen";
 $kunci = new PDO($dsn, "root", "");
 
 //2
-$sql = "INSERT INTO menu(namaMenu, harga, deskripsiMenu, gambar)
-        VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO menu(namaMenu, harga, deskripsiMenu, gambar, kategoriID)
+        VALUES (?, ?, ?, ?, ?)";
 
 //3
 $statement = $kunci->prepare($sql);
-$data = [$namaMenu, $harga, $deskripsiMenu, $gambar];
+$data = [$namaMenu, $harga, $deskripsiMenu, $gambar, $kategoriID];
 $statement->execute($data);
 
 $temp_file = $_FILES['gambar']['tmp_name'];

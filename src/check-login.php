@@ -2,7 +2,9 @@
 session_start();
 include "db_con.php";
 
-if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role']) && isset($_POST['captcha'])) {
+if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role']) 
+// && isset($_POST['captcha'])
+) {
 
     function test_input($data) {
         $data = trim($data);
@@ -14,7 +16,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     $username = test_input($_POST['username']);
     $password = test_input($_POST['password']);
     $role = test_input($_POST['role']);
-    $captcha = test_input($_POST['captcha']);
+    // $captcha = test_input($_POST['captcha']);
     
     if (empty($username)) {
         header("location: loginUser.php?error=Username is Required");

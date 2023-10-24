@@ -3,7 +3,7 @@ $dsn = "mysql:host=localhost;dbname=nikuramen";
 $kunci = new PDO($dsn, "root", "");
 
 $sql = "SELECT * FROM menu";
-$katgorisql = "SELECT kategoriID FROM kategori";
+$katgorisql = "SELECT * FROM kategori";
 
 $hasil = $kunci->query($sql);
 $kategorihasil = $kunci->query($katgorisql);
@@ -34,6 +34,7 @@ if(!isset($_SESSION['username']) &&
             </head>
 
             <body>
+                
                 <!-- <a href="logoutAdmin.php">
                     <div id="btnLogout">
                         <button type="submit" class="btn btn-danger" id="logout">Logout</button>
@@ -41,6 +42,7 @@ if(!isset($_SESSION['username']) &&
                 </a> -->
                 
 
+                
                 <nav class="bg-stone-500 sticky top-0 z-50">
                 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                     <div class="relative flex h-16 items-center justify-between">
@@ -125,11 +127,11 @@ if(!isset($_SESSION['username']) &&
                                     </div>
                                     <div id="kategoriContainer">
                                     <select id="kategori" name="dropdown">
-                                        <option value="$row['kategoriID']">RAMEN</option>
-                                        <option value="$row['kategoriID']">RICE BOWL</option>
-                                        <option value="$row['kategoriID']">SIDES MENU</option>
-                                        <option value="$row['kategoriID']">DESSERT</option>
-                                        <option value="$row['kategoriID']">DRINKS</option>
+                                        <option value="1">RAMEN</option>
+                                        <option value="2">RICE BOWL</option>
+                                        <option value="3">SIDES MENU</option>
+                                        <option value="4">DESSERT</option>
+                                        <option value="5">DRINKS</option>
                                     </select>
                                     </div>
                                     <br />
@@ -213,8 +215,7 @@ if(!isset($_SESSION['username']) &&
                             return true;
                         }
 
-                    </script>
-
+                    </script> 
             </body>
             </html>
         <?php

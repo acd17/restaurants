@@ -119,15 +119,16 @@ body {
 }
 
 /*Value Table*/
-/* #tabelCenter {
+#tabelCenter {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #tabelContainer {
     width: 1200px;
-} */
+}
 
 #colorRow1 {
     background-color: #897766;
