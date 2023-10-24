@@ -9,9 +9,55 @@ $items = json_decode($cartData, true);
 
 if(!isset($_SESSION['username']) &&
     !isset($_SESSION['password'])){
-        echo "You don't have access to this page";
+        echo "<div 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        '>";
+        echo "<div 
+        style='
+        background-color: #897766;
+        border-radius: 20px;
+        width: 450px;
+        '>";
+        echo "<div id='accessLogin' 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;'>";
+        echo "<div 
+        style =' 
+        color: white;
+        font-size: 22px;
+        text-align: center;
+        margin-top: 10px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        '> 
+        You don't have access to this page </div></div>";
         ?>
-        <a href="loginUser.php">Login</a>
+        <div 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        '>
+        <a href="loginUser.php">
+            <button 
+                style='width: 100px;
+                background-color: #4F483F;
+                border-radius: 20px;
+                color: white;
+                font-size: 18px;
+                margin-bottom: 10px;
+                cursor: pointer'
+                >Login</button>
+            </a>
+            </div>
+            </div>
+            </div>
         <?php
     }else{
         ?>
