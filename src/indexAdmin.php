@@ -145,7 +145,7 @@ if(!isset($_SESSION['username']) &&
 
                 <div class="section2">
                     <div id="section2">
-                    <div id="daftarMenu">DAFTAR MENU</div>
+                    <div id="daftarMenu"><b>DAFTAR MENU</b></div>
                         <div id="tabelCenter">
                             <table id="tabelContainer" class="table table-striped table-bordered">
                             <thead id="colorRow1" class="thead-light">

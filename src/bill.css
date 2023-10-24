@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: url('Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 800px;
+    background-color: #E2D3C4;
+    padding: 30px;
+    border-radius: 50px;
+    color: black;
+    opacity: 0.95;
+}
+
+#gambarMenuRow {
+    width: 220px;
+    font-size: 24px;
+}
+
+#rowKeterangan {
+    display: flex;
+    font-size: 22px;
+    width: 800px;
+      
+}
+
+#namaItemPesan {
+    padding: 10px;
+    width: 230px;
+    font-size: 18px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hargaItemPesan {
+    width: 280px;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapperTotalHarga {
+    width: 800px;
+    padding: 10px;
+    font-size: 22px;
+    display: flex;
+}
+
+#totalHarga {
+    width: 550px;
+}
+
+#containerBillPesan {
+    display: flex;
+}
+
+#namaMenu {
+    width: 230px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#hargaMenu {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapButtonPesan {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonPesan {
+    width: 200px;
+    height: 40px;
+    background-color: #897766;
+    border-radius: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+#gambar {
+    width: 200px;
+    border-radius: 20px;
+}
+
+#gambarMenu {
+    width: 220px;
+}

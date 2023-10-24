@@ -23,13 +23,11 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     } else if (empty($password)) {
         header("location: loginUser.php?error=Password is Required");
     }
-     else if (empty($captcha)) {
+    else if (empty($captcha)) {
         header("location: loginUser.php?error=Captcha is Required");
     } else if ($_SESSION['CAPTCHA_CODE'] != $captcha) {
         header("location: loginUser.php?error=Incorrect Captcha");
-    }
-
-
+    } 
     else {
         // Menggunakan prepared statement
         $sql = "SELECT * FROM users WHERE username=? AND password=?";

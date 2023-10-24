@@ -41,6 +41,12 @@
     height: 80vh;
 }
 
+.buttoncar
+{
+    background-color: #4F483F;
+    border-radius: 50%;
+}
+
 /* -------------------menu------------------- */
 
 
@@ -255,14 +261,91 @@ body {
 }
 
 .containerKategori:hover {
-    transform: scale(0.98); /* Mengubah skala elemen saat hover */
-}
+    transform: scale(0.98); 
+} 
 
 #wrapperOuter {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
-/* #wrapperOuter {
-    display: flex;
-} */
+
+@media (max-width: 768px)
+{
+    #AboutUs {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+        z-index: 100;
+        top: -15%;
+        left: 28%;
+        position: absolute;
+    }
+    
+    .Restoran {
+        width: 50%;
+        height: 40vh;
+        top: 5%;
+        position: absolute;
+        border-radius: 20px;
+        transition: transform .2s;
+    }
+
+    .text {
+        font-size: 15px;
+        color: black;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0,3), 5px 5px 70px rgba(255,255,255,0.5);
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: -40%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15%;
+    }
+
+    #JudulDeskripsiResto {
+        width: 550px;
+        top: 45%;
+        position: absolute;
+        margin-left: 50px;
+    }    
+    
+    .brand
+    {
+        display: flex;
+        margin-left: 40px;
+        top: 55%;
+        position: absolute;
+    }
+
+    .descresto
+    {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-left: 50px;
+        width: 70%;
+        top: 55%;
+        position: absolute;
+    }
+
+    .containerKategori {
+        width: 300px;
+        cursor: pointer;
+        margin-left: 100px;
+        position: relative;
+        transition: transform 0.2s;
+    }
+
+    .buttoncar
+    {
+        position: absolute;
+        top: 120px;
+        background-color: #4F483F;
+        border-radius: 50%;
+    }
+
+}

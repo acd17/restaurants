@@ -39,16 +39,15 @@ try{
 <head>
     <title>Form Data Mahaiswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-
+    <link rel="stylesheet" href="./formedit.css"></head>
 <body>
     <div class="container d-flex justify-content-center">
-        <div style="width:30rem">
+        <div id="formEditMenu" style="width:30rem">
         <br>
             <h2 class="text-center">Menu Edit</h2>
-            <div id="error"></div>
+            <div id="errorContainer"><div id="error"></div></div>
             <div class="card-body">
-                <form id="dataForm" action="form_editData.php?menuID=<?= $_GET['menuID'] ?>"  method="post" enctype="multipart/form-data" onsubmit="return form()">
+                <form  id="addMenu" action="form_editData.php?menuID=<?= $_GET['menuID'] ?>"  method="post" enctype="multipart/form-data" onsubmit="return form()">
                     <div class="form-group">
                         <div class="mb-1">
                             <label class="form-label">Menu Name</label>
@@ -66,8 +65,8 @@ try{
                             <label class="form-label">Image</label>
                             <input value="<img src='<?php echo $Foto ?>'" class="form-control" type="file" name="Foto" placeholder="Image"/>
                         </div>
-                        <div class="col-auto text-center">
-                            <button type="submit" class="btn btn-primary mb-3" style="padding-inline: 5%">Submit</button>
+                        <div id="btnAdd">
+                            <button id="buttonAdd" type="submit">Submit</button>
                         </div>
                         
                     </div>
@@ -79,7 +78,7 @@ try{
 
     <script>
         function form(){
-            var form = document.getElementById('dataForm');
+            var form = document.getElementById('addMenu');
             var requiredfields = form.querySelectorAll('input[type="text"], input[type="file"]');
             var errorMessage = document.getElementById('error');
 

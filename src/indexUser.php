@@ -91,7 +91,7 @@ $hasil = $kunci->query($sql);
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item">
@@ -106,11 +106,11 @@ $hasil = $kunci->query($sql);
       </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="buttoncar carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="buttoncar carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -178,7 +178,7 @@ $hasil = $kunci->query($sql);
                         echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
                         echo '<div id="HargaButton">';
                         echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
-                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
+                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
                     echo '</div>';
                 echo '</div>';
             echo '</div>';
@@ -205,8 +205,8 @@ $hasil = $kunci->query($sql);
         const invoice = document.getElementById("Invoice");
         const hargaTotal = document.getElementById("HargaTotal"); 
 
-        function tambahItem(nama, harga) {
-            items.push({ nama: nama, harga: harga });
+        function tambahItem(nama, harga, gambar) {
+            items.push({ nama: nama, harga: harga, gambar: gambar});
             console.log(items);
             hargaTotalValue += harga;
             updateInvoice();
