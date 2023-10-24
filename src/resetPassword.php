@@ -24,6 +24,7 @@
         if($query) {
             $query = mysqli_query($con, "DELETE FROM resetpassword WHERE code='$code'");
             exit("Password updated");
+            echo "<a href='./loginregis.php'>Back to Login</a>";
         }
         else {
             exit("Something went wrong");
@@ -37,4 +38,3 @@
     <input type="submit" name="submit" value="Update password">
 </form>
 
-echo "<p href="./loginregis.php">Back to Login</p>"
