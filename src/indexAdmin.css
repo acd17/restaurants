@@ -80,6 +80,13 @@ body {
     color: white;
 }
 
+#MenuEdit {
+    background-color: rgba(79, 72, 63, 0.9);
+    padding: 50px;
+    border-radius: 50px;
+    color: white;
+}
+
 #kategoriContainer {
     display: flex;
     justify-content: center;

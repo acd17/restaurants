@@ -1,0 +1,33 @@
+#addMenu {
+    background-color: rgba(79, 72, 63, 0.9);
+    padding: 50px;
+    border-radius: 50px;
+    color: white;
+    width: 450px;
+}
+
+#errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#error {
+    width: 450px;
+    background-color: #897766;
+    color: white;
+}
+
+#btnAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#buttonAdd {
+    width: 100px;
+    background-color: #897766;
+    border-radius: 20px;
+    color: white;
+}
