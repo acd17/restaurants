@@ -58,7 +58,7 @@
                     <img src="captcha.php" alt="PHP Captcha">
                 </div>
                 <button type="submit">Sign In</button>
-                <a href="#">Forgot your password?</a>
+                <a href="forgot_password.php">Forgot your password?</a>
             </form>
         </div>
         <div class="overlay-container">
