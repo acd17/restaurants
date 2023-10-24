@@ -12,7 +12,7 @@ session_start();
 
 if(!isset($_SESSION['username']) &&
     !isset($_SESSION['password'])){
-        echo "You don't have access to this page";
+        echo "<div id='accessLogin'> You don't have access to this page </div>";
         ?>
         <a href="check-login.php">Login</a>
         <?php
