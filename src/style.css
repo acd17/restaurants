@@ -3,6 +3,7 @@
 
 * {
 	box-sizing: border-box;
+	
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
-	margin: -20px 0 50px;
+	overflow: hidden;
 }
 
 h1 {
@@ -67,10 +68,25 @@ button:focus {
 }
 
 button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
+	background-color: #fff;
+	color: #4f483f;
 }
-
+.alert {
+    z-index: 999;
+    position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 40%;
+    top: 10px; /* Sesuaikan dengan posisi yang Anda inginkan */
+    left: 45px; /* Sesuaikan dengan posisi yang Anda inginkan */
+    background-color: #ef4444; /* Ganti warna latar belakang sesuai kebutuhan */
+    padding: 10px; /* Sesuaikan dengan padding yang Anda inginkan */
+    border: none;
+	border-radius: 10px; /* Sesuaikan dengan gaya border yang Anda inginkan */
+    color: #fff /* Sesuaikan dengan warna teks yang Anda inginkan */
+}
 form {
 	background-color: #FFFFFF;
 	display: flex;

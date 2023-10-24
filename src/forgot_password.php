@@ -1,4 +1,5 @@
 <?php
+echo '<link rel="stylesheet" type="text/css" href="forgotpassword.css">';
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -52,11 +53,11 @@ if (isset($_POST["email"])) {
 
 
         $mail->send();
-        echo '<p class="wdawda">Reset password link has been sent to your email!</p>';
+         echo '<p class="wdaw">Reset password link has been sent to your email!</p>';
     } catch (Exception $e) {
         echo "<p>Message could not be sent. Mailer Error: {$mail->ErrorInfo}</p>";
     }
-    exit();
+     exit();
 }
 ?>
 

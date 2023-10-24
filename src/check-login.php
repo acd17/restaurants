@@ -20,13 +20,17 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     
     if (empty($loginInput)) {
         header("location: loginregis.php?error=Username/Email is Required");
+        exit();
     } else if (empty($password)) {
         header("location: loginregis.php?error=Password is Required");
+        exit();
     }
     else if (empty($captcha)) {
         header("location: loginregis.php?error=Captcha is Required");
+        exit();
     } else if ($_SESSION['CAPTCHA_CODE'] != $captcha) {
         header("location: loginregis.php?error=Incorrect Captcha");
+        exit();
     } 
     else {
         
