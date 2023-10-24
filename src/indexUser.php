@@ -85,38 +85,70 @@ $hasil = $kunci->query($sql);
       </div>
     </nav>
 
-    <div class="section1">
-    </div>
-    <div class="section2">
-        <div class="text">
+    <!--CAROUSEL-->
+    <div class="con">
+    <div id="carouselExampleIndicators" class="carousel slide pointer-event w-100 items-center justify-center">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 rounded-md" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" src="../main/aset/promo1.png">
+        </div>
+        <div class="carousel-item active">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 rounded-md" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" src="../main/aset/promo2.png">
+        </div>
+        <div class="carousel-item active">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100 rounded-md" width="100" height="100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false" src="../main/aset/promo3.png">
+        </div>
+      </div>
 
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+</div>
+    
+        <div class="text">
             <div id="AboutUs">ABOUT US</div>
             <div id="RestoJudulDeskripsi">
                 <img src="Niku Ramen Resto.png" class="Restoran">
                 <div id="JudulDeskripsiResto">
-                    <h2>Niku Ramen</h2>
-                    <p>Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di 
-                        Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu 
-                        yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya yang
-                        lezat nih. Niku Ramen juga merupakan tempat yang cocok banget buat kamu
-                        yang mau bersantai-santai karena suasananya yang sangat nyaman, ditambah lagi
-                        restoran kami juga memiliki fasilitas WIFI yang pas untuk kamu yang mau bermain game,
-                        kerja, nongkrong, dan aktivitas lainnya. 
-                    </p>
-                    <p>
-                        Pilihan ramen sangat beragam, mulai dari daging ayam hingga daging sapi
-                        ditambah dengan kuah yang sangat nikmat. Kuah ramen pun sangat beragam,
-                        kamu bisa memilih rasa kuah sesuka keinginanmu. Pastinya harga
-                        makanan dan minuman di Niku Ramen juga sangat terjangkau ya ^_^.
-                    </p>
+                    <div class="brand">
+                        <img class="logobrand w-20 h-20 mr-4" src="../main/aset/logo.png" alt="">
+                        <div class="namabrand">
+                            <h2>Niku-Ramen</h2>
+                        </div>
+                    </div>
+                    <div class="descresto">
+                        <p>
+                                Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di 
+                            Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu 
+                            yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya. 
+                            Pastinya harga menu di Niku-Ramen juga sangat terjangkau ya ^_^.
+                        </p>
+                    </div>
+                    
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="ourmenu">
+        
+        <div class="section1">
+        </div>
+        <div class="section2">
+            <div class="ourmenu">
         <p>OUR MENU</p>
     </div>
+    </div>
+
+    
     <?php
         $flag = 0;
         $cId = 1;
