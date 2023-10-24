@@ -86,7 +86,7 @@ body {
 
 .carousel
 {
-    margin-top: 1%;
+    margin-top: 0%;
     justify-content: center;
     width: 100vw;
 }
@@ -283,7 +283,7 @@ body {
     margin-left: 400px;
 }
 
-#orderItem {
+/* #orderItem {
     background-color: rgba(79, 72, 63);
     width: 100px;
     height: 30px;
@@ -292,11 +292,15 @@ body {
     text-align: center;
     margin-bottom: 20px;
 
-}
+}*/
 
 #btnOrderItem {
-    background-color: rgba(79, 72, 63);
-}
+    justify-content: end;
+    align-items: end;
+    margin-top: 100px;
+    margin-bottom: 40px;
+} 
+
 
 #menuGambarNama {
     margin-right: 500px;

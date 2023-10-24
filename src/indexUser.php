@@ -166,7 +166,7 @@ $hasil = $kunci->query($sql);
         <div id="HargaTotal"></div>
         <div id="orderItem">
             <button id="btnOrderItem" onclick="checkout()">
-                Order
+            <img src="../main/aset/cart.png" alt="Order" class="button-image">
             </button>
         </div>
     </div>
