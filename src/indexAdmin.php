@@ -12,18 +12,32 @@ session_start();
 
 if(!isset($_SESSION['username']) &&
     !isset($_SESSION['password'])){
+        echo "<div 
+        style ='display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        '>";
+        echo "<div 
+        style='
+        background-color: #897766;
+        border-radius: 20px;
+        width: 450px;
+        '>";
         echo "<div id='accessLogin' 
         style ='display: flex;
         justify-content: center;
         align-items: center;'>";
         echo "<div 
-        style ='background-color: #897766; 
+        style =' 
         color: white;
-        font-size: 36px;
+        font-size: 22px;
         text-align: center;
-        width: 550px;
-        height: 50px;
+        margin-top: 10px;
         border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         '> 
         You don't have access to this page </div></div>";
         ?>
@@ -35,13 +49,17 @@ if(!isset($_SESSION['username']) &&
         '>
         <a href="check-login.php" style=''>
             <button 
-            style='width: 150px;
+            style='width: 100px;
             background-color: #4F483F;
             border-radius: 20px;
             color: white;
-            font-size: 28px;'
+            font-size: 18px;
+            margin-bottom: 10px;
+            cursor: pointer'
             >Login</button>
         </a>
+        </div>
+        </div>
         </div>
         <?php
     }else{
