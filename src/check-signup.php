@@ -2,7 +2,7 @@
 session_start();
 include "db_con.php";
 
-if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['re-password']) && isset($_POST['tanggal-lahir']) && isset($_POST['jenis-kelamin'])) {
+if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['re-password']) && isset($_POST['tanggal-lahir']) && isset($_POST['jenis-kelamin']) && isset($_POST['email'])) {
 
     function validate($data)
     {
@@ -21,8 +21,9 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
 
     $tanggal_lahir = validate($_POST['tanggal-lahir']);
     $jenis_kelamin = validate($_POST['jenis-kelamin']);
+    $email = validate($_POST['email']);
 
-    $user_data = 'first-name=' . $first_name . '&last-name=' . $last_name . '&username=' . $username . '&tanggal-lahir=' . $tanggal_lahir . '&jenis-kelamin=' . $jenis_kelamin;
+    $user_data = 'first-name=' . $first_name . '&last-name=' . $last_name . '&username=' . $username . '&tanggal-lahir=' . $tanggal_lahir . '&jenis-kelamin=' . $jenis_kelamin . '&email=' . $email;
 
     if (empty($username)) {
         header("location: signupUser.php?error=Username is Required&$user_data");
@@ -40,6 +41,8 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
         header("location: signupUser.php?error=Date of Birth is Required&$user_data");
     } else if (empty($jenis_kelamin)) {
         header("location: signupUser.php?error=Gender is Required&$user_data");
+    } else if (empty($email)) {
+        header("location: signupUser.php?error=Email is Required&$user_data");
     } else {
 
         // Menggunakan prepared statement
@@ -50,7 +53,7 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
             header("Location: signupUser.php?error=The username is taken, please choose another&$user_data");
             exit();
         } else {
-            $sql2 = "INSERT INTO users(username, password, name, jenis_kelamin, first_name, last_name, tanggal_lahir) VALUES('$username', '$password', '$first_name $last_name','$jenis_kelamin','$first_name','$last_name','$tanggal_lahir')";
+            $sql2 = "INSERT INTO users(username, password, name, jenis_kelamin, first_name, last_name, tanggal_lahir, email) VALUES('$username', '$password', '$first_name $last_name','$jenis_kelamin','$first_name','$last_name','$tanggal_lahir','$email')";
             $result2 = mysqli_query($conn, $sql2);
         
             if ($result2) {

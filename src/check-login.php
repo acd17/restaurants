@@ -13,13 +13,13 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         return $data;
     }
 
-    $username = test_input($_POST['username']);
+    $loginInput = test_input($_POST['username']); // Masukkan input ke dalam variabel loginInput
     $password = test_input($_POST['password']);
     $role = test_input($_POST['role']);
     $captcha = test_input($_POST['captcha']);
     
-    if (empty($username)) {
-        header("location: loginUser.php?error=Username is Required");
+    if (empty($loginInput)) {
+        header("location: loginUser.php?error=Username/Email is Required");
     } else if (empty($password)) {
         header("location: loginUser.php?error=Password is Required");
     }
@@ -30,12 +30,12 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     } 
     else {
         // Menggunakan prepared statement
-        $sql = "SELECT * FROM users WHERE username=? AND password=?";
+        $sql = "SELECT * FROM users WHERE (username=? OR email=?) AND password=?";
         $stmt = mysqli_stmt_init($conn);
 
         if (mysqli_stmt_prepare($stmt, $sql)) {
             // Mengikat parameter dan eksekusi statement
-            mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+            mysqli_stmt_bind_param($stmt, "sss", $loginInput, $loginInput, $password);
             mysqli_stmt_execute($stmt);
 
             // Mengambil hasil
@@ -57,7 +57,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
                     header("location: loginUser.php?error=Incorrect Role");
                 }
             } else {
-                header("location: loginUser.php?error=Incorrect Username and Password");
+                header("location: loginUser.php?error=Incorrect Username/Email and Password");
             }
         } else {
             header("location: loginUser.php?error=Database Error");
