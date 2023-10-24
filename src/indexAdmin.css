@@ -44,6 +44,7 @@ body {
 .section2 {
     background-color: white;
     position: relative;
+    padding: 30px;
 }
 
 /* #section2 {
@@ -109,13 +110,13 @@ body {
 
 #daftarMenu {
     font-size: 32px;
-    margin-bottom: 5px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 200;
     z-index: 1;
+    margin-bottom: 15px;
 }
 
 /*Value Table*/
