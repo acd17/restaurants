@@ -31,6 +31,7 @@
         <input type="text" placeholder="First name" name="first-name">
         <input type="text" placeholder="Last name" name="last-name">
         <input type="text" placeholder="Username" name="username">
+        <input type="email" placeholder="Email" name="email">
         <input type="password" placeholder="Password" name="password">
         <input type="password" placeholder="Re Password" name="re-password">
         <input type="date" placeholder="Tanggal lahir" name="tanggal-lahir">
