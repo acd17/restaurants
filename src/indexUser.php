@@ -137,19 +137,16 @@ $hasil = $kunci->query($sql);
                         <tbody>";
             }
             echo '<div id="wrapperOuter"';
-                echo '<div class="containerKategori" onclick="showDetail(\'' . $row['namaMenu'] . '\')">';
+                echo '<div class="containerKategori" onclick="showDetail(\'itemDetail\')">';
                     echo '<div id="menuGambarNama">';
                         echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
                         echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
                     echo '</div>';
-                    echo '<div id="popupCard" class="popupCard">';
-                        echo '<div class="itemDetail">';
-                            echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
-                            echo '<div id="HargaButton">';
-                            echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
-                            echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
-                        echo '</div>';
-                        echo '<button onclick="closePopupCard()">Tutup</button>';
+                    echo '<div class="itemDetail">';
+                        echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
+                        echo '<div id="HargaButton">';
+                        echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
+                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
                     echo '</div>';
                 echo '</div>';
             echo '</div>';
@@ -204,27 +201,6 @@ $hasil = $kunci->query($sql);
                 }
             });
         }
-        function showDetail(detailId) {
-    // Cari elemen item detail berdasarkan detailId (mungkin perlu menggunakan ID yang unik)
-    var itemDetail = document.getElementById('itemDetail'); // Gunakan ID itemDetail yang telah Anda tambahkan
-
-    // Tampilkan item detail
-    itemDetail.style.display = 'block';
-
-    // Tampilkan popup card
-    var popupCard = document.getElementById('popupCard');
-    popupCard.style.display = 'block';
-}
-
-// Function untuk menutup popup card
-function closePopupCard() {
-    var itemDetail = document.getElementById('itemDetail');
-    var popupCard = document.getElementById('popupCard');
-
-    // Sembunyikan item detail dan popup card
-    itemDetail.style.display = 'none';
-    popupCard.style.display = 'none';
-}
 
     </script>
 </body>

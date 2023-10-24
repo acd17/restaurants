@@ -216,14 +216,13 @@ body {
     transition: transform 0.2s;
 }
 
-<<<<<<< Updated upstream
+.containerKategori:hover {
+    transform: scale(0.98); /* Mengubah skala elemen saat hover */
+}
+
 #wrapperOuter {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-=======
-.containerKategori:hover {
-    transform: scale(0.98); /* Mengubah skala elemen saat hover */
->>>>>>> Stashed changes
 }
 
 /* #wrapperOuter {
