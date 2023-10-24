@@ -167,14 +167,14 @@ body {
 
 /*Nama Kategori & Value Item*/
 
-.ourmenu
+/* .ourmenu
 {
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 40px;
     font-weight: 800;
-}
+} */
 
 #namaKategori {
     font-size: 32px;
@@ -233,7 +233,7 @@ body {
     margin-right: 15px;
 }
 
-.itemDetail {
+/* .itemDetail {
     display: none;
     background-color: white; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
@@ -254,14 +254,15 @@ body {
     transition: transform 0.2s;
 }
 
-.containerKategori:hover {
-    transform: scale(0.98); /* Mengubah skala elemen saat hover */
-}
+/* .containerKategori:hover {
+    transform: scale(0.98); 
+    Mengubah skala elemen saat hover
+} */
 
-#wrapperOuter {
+/* #wrapperOuter {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-}
+} */
 
 /* #wrapperOuter {
     display: flex;

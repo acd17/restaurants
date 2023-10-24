@@ -178,7 +178,7 @@ $hasil = $kunci->query($sql);
                         echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
                         echo '<div id="HargaButton">';
                         echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
-                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ')">+</button>';
+                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
                     echo '</div>';
                 echo '</div>';
             echo '</div>';
@@ -205,8 +205,8 @@ $hasil = $kunci->query($sql);
         const invoice = document.getElementById("Invoice");
         const hargaTotal = document.getElementById("HargaTotal"); 
 
-        function tambahItem(nama, harga) {
-            items.push({ nama: nama, harga: harga });
+        function tambahItem(nama, harga, gambar) {
+            items.push({ nama: nama, harga: harga, gambar: gambar});
             console.log(items);
             hargaTotalValue += harga;
             updateInvoice();

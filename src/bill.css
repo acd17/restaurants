@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    width: 700px;
+    background-color: rgba(79, 72, 63, 0.9);
+    padding: 30px;
+    border-radius: 50px;
+    color: white;
+
+}
+
+#gambarMenuRow {
+    width: 300px;
+}
+
+#rowKeterangan {
+    display: flex;
+    font-size: 22px;
+    width: 700px;
+}
+
+#namaItemPesan {
+    padding: 10px;
+    width: 250px;
+}
+
+#hargaItemPesan {
+    padding: 10px;
+}
+
+#wrapperTotalHarga {
+    width: 700px;
+    padding: 10px;
+    font-size: 22px;
+    display: flex;
+}
+
+#totalHarga {
+    width: 500px;
+}
+
+#containerBillPesan {
+    display: flex;
+}
+
+#namaMenu {
+    width: 250px;
+}
+
+#wrapButtonPesan {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonPesan {
+    width: 200px;
+    height: 40px;
+    background-color: #897766;
+    border-radius: 20px;
+    color: white;
+    font-size: 22px;
+}
+
+#gambar {
+    width: 200px;
+}
+
+#gambarMenu {
+    width: 290px;
+}
