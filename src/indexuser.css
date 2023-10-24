@@ -195,19 +195,6 @@ body {
     display: none;
 }
 
-.popupCard {
-    display: none;
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-
 .containerKategori {
     width: 300px;
     display: flex;
