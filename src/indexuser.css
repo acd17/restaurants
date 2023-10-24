@@ -224,6 +224,10 @@ body {
     margin-top: 50px;
 }
 
+#HargaTotal {
+    display: none;
+}
+
 #HargaButton {
     display: flex;
     padding: 5px;
