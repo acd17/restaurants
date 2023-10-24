@@ -44,7 +44,7 @@ if(!isset($_SESSION['username']) &&
         align-items: center;
         margin-top: 10px;
         '>
-        <a href="loginUser.php">
+        <a href="loginregis.php">
             <button 
                 style='width: 100px;
                 background-color: #4F483F;
