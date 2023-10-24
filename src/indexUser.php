@@ -114,41 +114,33 @@ $hasil = $kunci->query($sql);
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-</div>
-    
-        <div class="text">
-            <div id="AboutUs">ABOUT US</div>
-            <div id="RestoJudulDeskripsi">
-                <img src="Niku Ramen Resto.png" class="Restoran">
-                <div id="JudulDeskripsiResto">
-                    <div class="brand">
-                        <img class="logobrand w-20 h-20 mr-4" src="../main/aset/logo.png" alt="">
-                        <div class="namabrand">
-                            <h2>Niku-Ramen</h2>
-                        </div>
+
+    <div class="section2">
+    <div class="text"></div>
+        <div id="AboutUs">ABOUT US</div>
+        <div id="RestoJudulDeskripsi">
+            <img src="Niku Ramen Resto.png" class="Restoran">
+            <div id="JudulDeskripsiResto">
+                <div id="brand">
+                    <img class="logobrand w-20 h-20 mr-4" src="../main/aset/logo.png" alt="">
+                    <div class="namabrand">
+                        <h2>Niku-Ramen</h2>
                     </div>
-                    <div class="descresto">
-                        <p>
-                                Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di 
-                            Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu 
-                            yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya. 
-                            Pastinya harga menu di Niku-Ramen juga sangat terjangkau ya ^_^.
-                        </p>
-                    </div>
-                    
+                </div>
+                <div class="descresto">
+                    <p>Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu  yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya. Pastinya harga menu di Niku-Ramen juga sangat terjangkau ya ^_^.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="section1">
-        </div>
-        <div class="section2">
-            <div class="ourmenu">
+    </div>
+    </div>
+    
+    <div class="section1">
+    </div>
+    <div id="WraperOuterMenu" class="section2">
+    <div class="ourmenu">
         <p>OUR MENU</p>
     </div>
-    </div>
-
-    
     <?php
         $flag = 0;
         $cId = 1;
@@ -168,19 +160,19 @@ $hasil = $kunci->query($sql);
                         </thead>
                         <tbody>";
             }
-            echo '<div id="wrapperOuter"';
-                echo '<div class="containerKategori" onclick="showDetail(\'itemDetail\')">';
-                    echo '<div id="menuGambarNama">';
-                        echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
-                        echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
-                    echo '</div>';
-                    echo '<div class="itemDetail">';
-                        echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
-                        echo '<div id="HargaButton">';
-                        echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
-                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
-                    echo '</div>';
+            echo '<div id="wrapperOuter class="containerKategori" onclick="showDetail(\'itemDetail\')">';
+            echo '<div id="GambarNamaDeskripsiHarga">';
+                echo '<div id="menuGambarNama">';
+                    echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
+                    echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
                 echo '</div>';
+                echo '<div id="itemDeskripsiHarga" class="itemDetail">';
+                    echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
+                    echo '<div id="HargaButton">';
+                    echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
+                    echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
+                echo '</div>';
+            echo '</div>';
             echo '</div>';
             
         }
@@ -190,11 +182,12 @@ $hasil = $kunci->query($sql);
     <div id="Invoice"></div>
         <div id="Bill">
         <div id="HargaTotal"></div>
-        <div>
-            <button onclick="checkout()">
-                Pesan
+        <div id="orderItem">
+            <button id="btnOrderItem" onclick="checkout()">
+                Order
             </button>
         </div>
+    </div>
     </div>
     
 
