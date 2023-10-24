@@ -26,23 +26,23 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
     $user_data = 'first-name=' . $first_name . '&last-name=' . $last_name . '&username=' . $username . '&tanggal-lahir=' . $tanggal_lahir . '&jenis-kelamin=' . $jenis_kelamin . '&email=' . $email;
 
     if (empty($username)) {
-        header("location: signupUser.php?error=Username is Required&$user_data");
+        header("location: loginregis.php?error=Username is Required&$user_data");
     } else if (empty($password)) {
-        header("location: signupUser.php?error=Password is Required&$user_data");
+        header("location: loginregis.php?error=Password is Required&$user_data");
     } else if (empty($re_password)) {
-        header("location: signupUser.php?error=Password Confirmation is Required&$user_data");
+        header("location: loginregis.php?error=Password Confirmation is Required&$user_data");
     } else if ($password !== $re_password) {
-        header("Location: signupUser.php?error=Password and Confirmation Password do not match&$user_data");
+        header("Location: loginregis.php?error=Password and Confirmation Password do not match&$user_data");
     } else if (empty($first_name)) {
-        header("location: signupUser.php?error=First Name is Required&$user_data");
+        header("location: loginregis.php?error=First Name is Required&$user_data");
     } else if (empty($last_name)) {
-        header("location: signupUser.php?error=Last Name is Required&$user_data");
+        header("location: loginregis.php?error=Last Name is Required&$user_data");
     } else if (empty($tanggal_lahir)) {
-        header("location: signupUser.php?error=Date of Birth is Required&$user_data");
+        header("location: loginregis.php?error=Date of Birth is Required&$user_data");
     } else if (empty($jenis_kelamin)) {
-        header("location: signupUser.php?error=Gender is Required&$user_data");
+        header("location: loginregis.php?error=Gender is Required&$user_data");
     } else if (empty($email)) {
-        header("location: signupUser.php?error=Email is Required&$user_data");
+        header("location: loginregis.php?error=Email is Required&$user_data");
     } else {
 
         // Menggunakan prepared statement
@@ -50,22 +50,22 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
-            header("Location: signupUser.php?error=The username is taken, please choose another&$user_data");
+            header("Location: loginregis.php?error=The username is taken, please choose another&$user_data");
             exit();
         } else {
             $sql2 = "INSERT INTO users(username, password, name, jenis_kelamin, first_name, last_name, tanggal_lahir, email) VALUES('$username', '$password', '$first_name $last_name','$jenis_kelamin','$first_name','$last_name','$tanggal_lahir','$email')";
             $result2 = mysqli_query($conn, $sql2);
         
             if ($result2) {
-                header("Location: loginUser.php?success=Your account has been created successfully");
+                header("Location: loginregis.php?success=Your account has been created successfully");
                 exit();
             } else {
-                header("Location: signupUser.php?error=An unknown error occurred&$user_data");
+                header("Location: loginregis.php?error=An unknown error occurred&$user_data");
                 exit();
             }
         }
     }
 } else {
-    header("location: signupUser.php");
+    header("location: loginregis.php");
 }
 ?>

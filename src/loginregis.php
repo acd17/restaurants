@@ -24,7 +24,7 @@
             </div>
         <?php } ?>
         <div class="form-container sign-up-container">
-            <form action="/src/check-signup.php" method="post">
+            <form action="check-signup.php" method="post">
                 <h1>Create Account</h1>
                 <span>Use your username and email for registration</span>
                 <input type="text" placeholder="First name" name="first-name">
@@ -43,7 +43,7 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="/src/check-login.php" method="post">
+            <form action="check-login.php" method="post">
                 <h1>Sign in</h1>
                 <span>use your account</span>
                 <input type="text" placeholder="Username / Email" />

@@ -19,14 +19,14 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     $captcha = test_input($_POST['captcha']);
     
     if (empty($loginInput)) {
-        header("location: loginUser.php?error=Username/Email is Required");
+        header("location: loginregis.php?error=Username/Email is Required");
     } else if (empty($password)) {
-        header("location: loginUser.php?error=Password is Required");
+        header("location: loginregis.php?error=Password is Required");
     }
     else if (empty($captcha)) {
-        header("location: loginUser.php?error=Captcha is Required");
+        header("location: loginregis.php?error=Captcha is Required");
     } else if ($_SESSION['CAPTCHA_CODE'] != $captcha) {
-        header("location: loginUser.php?error=Incorrect Captcha");
+        header("location: loginregis.php?error=Incorrect Captcha");
     } 
     else {
         // Menggunakan prepared statement
@@ -54,17 +54,17 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
                         header("location: indexUser.php");
                     }
                 } else {
-                    header("location: loginUser.php?error=Incorrect Role");
+                    header("location: loginregis.php?error=Incorrect Role");
                 }
             } else {
-                header("location: loginUser.php?error=Incorrect Username/Email and Password");
+                header("location: loginregis.php?error=Incorrect Username/Email and Password");
             }
         } else {
-            header("location: loginUser.php?error=Database Error");
+            header("location: loginregis.php?error=Database Error");
         }
     }
 } 
 else {
-    header("location: loginUser.php");
+    header("location: loginregis.php");
 }
 ?>
