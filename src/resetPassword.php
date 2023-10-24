@@ -24,19 +24,15 @@ if (isset($_POST["password"])) {
 
     if ($query) {
         $query = mysqli_query($con, "DELETE FROM resetpassword WHERE code='$code'");
-        exit("Password updated");
-        echo "<a href='./loginregis.php'>Back to Login</a>";
+        exit("<a href='./loginregis.php'>Password updated</a>");
+        // echo "<a href='./loginregis.php'>Back to Login</a>";
     } else {
         exit("Something went wrong");
     }
 }
 ?>
 
-<form method="POST">
-    <input type="password" name="password" placeholder="New password">
-    <br>
-    <input type="submit" name="submit" value="Update password">
-</form>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,18 +48,11 @@ if (isset($_POST["password"])) {
     <div class="container">
         <div class="password-container">
             <img src="../main/aset/logo.png" alt="test">
-            <h1>Enter your email to reset password</h1>
+            <h1>Set a new password</h1>
             <form method="POST">
-                <input type="text" name="email" placeholder="Email" autocomplete="off" class="">
+                <input type="password" name="password" placeholder="New password">
                 <br>
-                <button id="btn" type="submit" name="submit" value="Update password">
-                    <p id="btnText">Send</p>
-                    <div class="check-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-                            <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
-                        </svg>
-                    </div>
-                </button>
+                <input type="submit" name="submit" value="Update password">
             </form>
         </div>
     </div>
