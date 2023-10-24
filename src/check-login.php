@@ -3,7 +3,7 @@ session_start();
 include "db_con.php";
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role']) 
-// && isset($_POST['captcha'])
+&& isset($_POST['captcha'])
 ) {
 
     function test_input($data) {
@@ -16,18 +16,20 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     $username = test_input($_POST['username']);
     $password = test_input($_POST['password']);
     $role = test_input($_POST['role']);
-    // $captcha = test_input($_POST['captcha']);
+    $captcha = test_input($_POST['captcha']);
     
     if (empty($username)) {
         header("location: loginUser.php?error=Username is Required");
     } else if (empty($password)) {
         header("location: loginUser.php?error=Password is Required");
     }
-    // } else if (empty($captcha)) {
-    //     header("location: loginUser.php?error=Captcha is Required");
-    // } else if ($_SESSION['CAPTCHA_CODE'] != $captcha) {
-    //     header("location: loginUser.php?error=Incorrect Captcha");
-    // } 
+     else if (empty($captcha)) {
+        header("location: loginUser.php?error=Captcha is Required");
+    } else if ($_SESSION['CAPTCHA_CODE'] != $captcha) {
+        header("location: loginUser.php?error=Incorrect Captcha");
+    }
+
+
     else {
         // Menggunakan prepared statement
         $sql = "SELECT * FROM users WHERE username=? AND password=?";
@@ -63,7 +65,8 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
             header("location: loginUser.php?error=Database Error");
         }
     }
-} else {
+} 
+else {
     header("location: loginUser.php");
 }
 ?>
