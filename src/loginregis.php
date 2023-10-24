@@ -70,7 +70,7 @@
                 </div>
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Nikumers!</h1>
-                    <p>Enter your personal details and taste the best ramen</p>
+                    <p>Enter your personal details and be part of Nikumers ramen</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
