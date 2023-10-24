@@ -46,8 +46,8 @@
             <form action="check-login.php" method="post">
                 <h1>Sign in</h1>
                 <span>use your account</span>
-                <input type="text" placeholder="Username / Email" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Username / Email" name="username" />
+                <input type="password" placeholder="Password" name="password" />
                 <select id="user-type" required name="role">
                     <option selected>Select User Type</option>
                     <option value="user">User</option>
