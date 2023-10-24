@@ -27,9 +27,9 @@ if(!isset($_SESSION['username']) &&
             <?php 
             $hargaTotalValue = 0;
             echo "<div id='rowKeterangan'>";
-            echo "<div id='gambarMenuRow'>"; echo "Gambar Menu"; echo "</div>";
-            echo "<div id='namaMenu'>"; echo "Nama Menu"; echo "</div>";
-            echo "<div id='hargaMenu'>"; echo "Harga Menu"; echo "</div>";
+            echo "<div id='gambarMenuRow'><b>"; echo "Gambar Menu"; echo "</b></div>";
+            echo "<div id='namaMenu'><b>"; echo "Nama Menu"; echo "</b></div>";
+            echo "<div id='hargaMenu'><b>"; echo "Harga Menu"; echo "</b></div>";
             echo "</div>";
             echo "<hr>";
             foreach($items as $key => $value){
@@ -37,8 +37,8 @@ if(!isset($_SESSION['username']) &&
                 echo "<div id='gambarMenu'>";
                 echo '<img id="gambar" src="../src/' . $value['gambar'] . '">';
                 echo "</div>";
-                echo "<div id='namaItemPesan'>" . $value['nama'] . "</div>";
-                echo "<div id='hargaItemPesan'> Rp " . $value['harga'] . "</div>";
+                echo "<div id='namaItemPesan'><b>" . $value['nama'] . "</b></div>";
+                echo "<div id='hargaItemPesan'><b> Rp " . $value['harga'] . "</b></div>";
                 $hargaTotalValue += $value['harga'];
                 echo "<br />";
                 echo "</div>";
