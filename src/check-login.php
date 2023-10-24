@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
     }
 
     $loginInput = test_input($_POST['username']); // Masukkan input ke dalam variabel loginInput
-    $password = test_input($_POST['password']);
+    $password = md5(test_input($_POST['password']));
     $role = test_input($_POST['role']);
     $captcha = test_input($_POST['captcha']);
     
@@ -29,6 +29,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         header("location: loginregis.php?error=Incorrect Captcha");
     } 
     else {
+        
         // Menggunakan prepared statement
         $sql = "SELECT * FROM users WHERE (username=? OR email=?) AND password=?";
         $stmt = mysqli_stmt_init($conn);

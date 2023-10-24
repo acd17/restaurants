@@ -53,6 +53,7 @@ if (isset($_POST['first-name']) && isset($_POST['last-name']) && isset($_POST['u
             header("Location: loginregis.php?error=The username is taken, please choose another&$user_data");
             exit();
         } else {
+            $password = md5($password);
             $sql2 = "INSERT INTO users(username, password, name, jenis_kelamin, first_name, last_name, tanggal_lahir, email) VALUES('$username', '$password', '$first_name $last_name','$jenis_kelamin','$first_name','$last_name','$tanggal_lahir','$email')";
             $result2 = mysqli_query($conn, $sql2);
         
