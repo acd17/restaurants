@@ -30,31 +30,16 @@ $hasil = $kunci->query($sql);
         <div class="relative flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div x-data="{ sidebarOpen: false }">
-              <!-- Tombol untuk membuka/menutup sidebar -->
-              <!-- <button @click="sidebarOpen = !sidebarOpen" class="p-2">
-                  <img class="h-8 w-auto" src="../main/aset/menu-svgrepo-com.svg" alt="Your Company">
-              </button> -->
-          
-              <!-- Sidebar -->
-              <!-- <div :class="{'translate-x-0': sidebarOpen, '-translate-x-full': !sidebarOpen}" class="fixed left-0 top-0 h-full w-64 bg-stone-600 opacity-95 transition-transform duration-300 ease-in-out transform z-10">
-                  
-                  <ul class="p-4">
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Best Offers</a></li>
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Recommendation</a></li>
-                      <li><a href="#" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">About Us</a></li>
-                      <li><a href="menu.html" class="block px-4 py-2 text-sm text-stone-300 hover:bg-stone-700 rounded-lg">Menu</a></li>
-                  </ul>
-              </div> -->
-          </div>          
-           <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
-            <div class="logoNiku sm:block items-center mt-0">
-               <div class="logos flex flex-col items-center">
-                  <img class="h-8 w-auto" src="../main/aset/logo.png" alt="logo">
-                  <a class="font-bold text-stone-700">NIKURAMEN</a>
-              </div>
+            </div>          
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js"></script>
+                <div class="logoNiku sm:block items-center mt-0">
+                <div class="logos flex flex-col items-center">
+                    <img class="h-8 w-auto" src="../main/aset/logo.png" alt="logo">
+                    <a class="font-bold text-stone-700">NIKURAMEN</a>
+                </div>
+                </div>
             </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
     
             <!-- Profile dropdown -->
@@ -72,8 +57,6 @@ $hasil = $kunci->query($sql);
                             echo '<a href="logoutUser.php" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1">Logout</a>';
                         }
                     ?>
-                   <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-1">Sign Out</a> -->
-                   <!-- <a href="#" class="block px-4 py-2 text-sm text-stone-300" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a> -->
                </div>
            </div>
            
@@ -114,41 +97,33 @@ $hasil = $kunci->query($sql);
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-</div>
-    
-        <div class="text">
-            <div id="AboutUs">ABOUT US</div>
-            <div id="RestoJudulDeskripsi">
-                <img src="Niku Ramen Resto.png" class="Restoran">
-                <div id="JudulDeskripsiResto">
-                    <div class="brand">
-                        <img class="logobrand w-20 h-20 mr-4" src="../main/aset/logo.png" alt="">
-                        <div class="namabrand">
-                            <h2>Niku-Ramen</h2>
-                        </div>
+
+    <div class="section2">
+    <div class="text"></div>
+        <div id="AboutUs">ABOUT US</div>
+        <div id="RestoJudulDeskripsi">
+            <img src="Niku Ramen Resto.png" class="Restoran">
+            <div id="JudulDeskripsiResto">
+                <div id="brand">
+                    <img class="logobrand w-20 h-20 mr-4" src="../main/aset/logo.png" alt="">
+                    <div class="namabrand">
+                        <h2>Niku-Ramen</h2>
                     </div>
-                    <div class="descresto">
-                        <p>
-                                Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di 
-                            Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu 
-                            yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya. 
-                            Pastinya harga menu di Niku-Ramen juga sangat terjangkau ya ^_^.
-                        </p>
-                    </div>
-                    
+                </div>
+                <div class="descresto">
+                    <p>Niku Ramen adalah restoran bagi para pecinta ramen yang berlokasi di Gading Serpong Tangerang Selatan. Restoran ini cocok banget buat kamu  yang mau menikmati berbagai macam ramen dan hidangan Jepang lainnya. Pastinya harga menu di Niku-Ramen juga sangat terjangkau ya ^_^.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="section1">
-        </div>
-        <div class="section2">
-            <div class="ourmenu">
+    </div>
+    </div>
+    
+    <div class="section1">
+    </div>
+    <div id="WraperOuterMenu" class="section2">
+    <div class="ourmenu">
         <p>OUR MENU</p>
     </div>
-    </div>
-
-    
     <?php
         $flag = 0;
         $cId = 1;
@@ -168,21 +143,20 @@ $hasil = $kunci->query($sql);
                         </thead>
                         <tbody>";
             }
-            echo '<div id="wrapperOuter"';
-                echo '<div class="containerKategori" onclick="showDetail(\'itemDetail\')">';
-                    echo '<div id="menuGambarNama">';
-                        echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
-                        echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
-                    echo '</div>';
-                    echo '<div class="itemDetail">';
-                        echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
-                        echo '<div id="HargaButton">';
-                        echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
-                        echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
-                    echo '</div>';
+            echo '<div id="wrapperOuter class="containerKategori" onclick="showDetail(\'itemDetail\')">';
+            echo '<div id="GambarNamaDeskripsiHarga">';
+                echo '<div id="menuGambarNama">';
+                    echo '<img id="gambar" src="../src/' . $row['gambar'] . '">';
+                    echo '<div id="itemName">' . $row['namaMenu'] . '</div>';
+                echo '</div>';
+                echo '<div id="itemDeskripsiHarga" class="itemDetail">';
+                    echo '<div id="deskripsiMenu">' . $row['deskripsiMenu'] . '</div>';
+                    echo '<div id="HargaButton">';
+                    echo '<div id="itemHarga"> Rp ' . $row['harga'] . '</div>';
+                    echo '<button id="buttonTambah" onclick="tambahItem(\'' . $row['namaMenu'] . '\', ' . $row['harga'] . ',\'' . $row['gambar'] . '\')">+</button>';
                 echo '</div>';
             echo '</div>';
-            
+            echo '</div>';
         }
     ?>
    
@@ -190,11 +164,12 @@ $hasil = $kunci->query($sql);
     <div id="Invoice"></div>
         <div id="Bill">
         <div id="HargaTotal"></div>
-        <div>
-            <button onclick="checkout()">
-                Pesan
+        <div id="orderItem">
+            <button id="btnOrderItem" onclick="checkout()">
+                Order
             </button>
         </div>
+    </div>
     </div>
     
 
