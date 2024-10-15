@@ -1,0 +1,398 @@
+/*Best Offer & Recommendations*/
+.Wraper {
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.WrapOuterBestOffer, .WrapOuterRecommendations {
+    position: relative;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 15px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0,3), 5px 5px 70px rgba(255,255,255,0.5);
+    z-index: 1;
+    text-align: center;
+    padding: 30px;
+}
+
+.WrapPromo, .WrapRecommendations {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.WrapPromoPertama, .WrapPromoKedua {
+    text-align: left;
+    margin: 20px 100px 10px 100px ;
+}
+
+.WrapRecommendationsPertama, .WrapRecommendationsKedua, .WrapRecommendationsKetiga {
+    text-align: left;
+    margin: 20px 100px 10px 100px ;
+}
+
+.Promo {
+    width: 500px;
+    border-radius: 20px;
+    transition: transform .2s;
+}
+
+.Promo:hover, .Recommendations:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Recommendations {
+    width: 250px;
+    border-radius: 20px;
+    transition: transform .2s;
+}
+
+.ButtonRecommendations {
+}
+
+/*Parallax1*/
+
+html {
+    overflow: hidden;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.section1 {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.section1::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('../W09/Aset/Parallax3.jpg') center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+}
+
+.section2 {
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+}
+
+.text {
+    left: 50%;
+    width: 900px;
+    height: 50vh;
+    position: relative;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 15px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0,3), 5px 5px 70px rgba(255,255,255,0.5);
+    transform: scale(1,1.1) translate(-50%, 10%);    
+    z-index: 1;
+}
+
+/*About Us*/
+#AboutUs {
+    text-align: center;
+    padding: 20px;
+}
+
+.Restoran {
+    width: 30%;
+    border-radius: 20px;
+    transition: transform .2s;
+}
+
+.Restoran:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#RestoJudulDeskripsi {
+    display: flex;
+}
+
+#JudulDeskripsiResto {
+    width: 550px;
+    padding: 30px;
+}
+
+/*Footer*/
+
+footer {
+    position: relative;
+    color: white;
+    background-color: rgb(79, 74, 74);
+}
+
+#InformasiNiku {
+    position: relative;
+    top: 20px;
+    width: 900px;
+    height: 200px;
+    background-color: black;
+    z-index: 1;
+}
+
+#InformasiResto {
+    position: absolute;
+}
+
+#LogoRestoran {
+    position: absolute;
+    width: 210px;
+    height: 200px;
+    text-align: center;
+    top: 20px;
+    left: 60px;
+    z-index: 1;
+}
+
+#LogoFooter {
+    width: 120px;
+    z-index: 1;
+}
+
+#LogoText {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    width: 210px;
+    z-index: 1;
+}
+
+#ContactUs {
+    position: absolute;
+    top: 60px;
+    left: 290px;
+    z-index: 1;
+}
+
+#TextContactUs {
+    position: absolute;
+    font-size: 12px;
+    width: 500px;
+    z-index: 1;
+}
+
+#EmpatIcon {
+    position: absolute;
+    display: flex;
+    left: 110px;
+    top: -15px;
+    z-index: 1;
+}
+
+.icon {
+    width: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 1;
+    transition: transform .2s;
+}
+
+.icon:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+#LokasiRestoran {
+    position: absolute;
+    font-size: 14px;
+    height: auto;
+    width: 440px;
+    top: 110px;
+    left: 290px;
+    z-index: 1;
+}
+
+/*GoTop*/
+#goTopButton {
+  position: relative;
+  left: 1800px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/*Menu*/
+.TextChasuRamenSpecial, .TextKatsuRamenSpecial {
+    text-align: center;
+    padding: 30px;
+}
+
+.TextRiceBowl, .TextSidesMenu, .TextDessert, .TextDrinks {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.Chasu, .Katsu, .RiceBowl, .SidesMenu, .Dessert, .Drinks {
+    width: 300px;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.Chasu:hover, .Katsu:hover, .RiceBowl:hover, .SidesMenu:hover, .Dessert:hover, .Drinks:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.WrapChasuRamenSpecial, .WrapKatsuRamenSpecial, .WrapRiceBowl, .WrapSidesMenu, .WrapDessert, .WrapDrinks {
+    display: flex;
+}
+
+.WrapOuterRamen, .WrapOuterRiceBowlSidesMenu, .WrapOuterDessertDrinks {
+    margin-left: 150px;
+    margin-right: 100px;
+}
+
+.WrapChasuOriginalRamen, .WrapChasuCurryRamen, .WrapChasuMisoRamen, .WrapChasuSpicyRamen {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapKatsuOriginalRamen, .WrapKatsuCurryRamen, .WrapKatsuMisoRamen, .WrapKatsuSpicyRamen {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapNikuRiceBowl, .WrapEbiFuraiRiceBowl, .WrapKarageRiceBowl, .WrapBeefRiceBowl {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapGyoza, .WrapKarage, .WrapChickenKatsu, .WrapEbiFry {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapNikuMilkPudding, .WrapNikuDango, .WrapVanillaIceCream, .WrapNikuTaiyaki {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.WrapOcha, .WrapMineralWater, .WrapLemonTea, .WrapLycheeTea {
+    width: 250px;
+    margin-right: 180px;
+}
+
+.HargaButton {
+    display: flex;
+}
+
+.Harga {
+    width: 300px;
+}
+
+.ButtonTambah {
+    width: 50px;
+    background-color: #44403c;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+}
+
+body {
+    backdrop-filter: none;
+}
+
+#Invoice {
+    width: 800px;
+    height: auto;
+    background-color: #44403c;
+    color: white;
+    border-radius: 10px;
+    display: none;
+    padding: 15px;
+    position: relative;
+    top: -600px;
+    bottom: 10px;
+    z-index: 2;
+    left: 550px;
+}
+
+#itemContainer, #itemElement {
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+}
+
+#itemTotalHarga {
+    display: flex;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#exitButton {
+    margin-left: 750px;
+}
+
+#namaItem, #nama, #TotalHarga {
+    width: 500px;
+    text-align: left;
+}
+
+#Bill {
+    display: flex;
+    margin-left: 1600px;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 3600px;
+}
+
+#HargaTotal {
+    width: 200px;
+    height: 50px;
+    background-color: #4F483F;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Keranjang {
+    width: 50px;
+    background-color: #44403c;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
+}

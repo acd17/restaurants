@@ -99,7 +99,6 @@ $hasil = $kunci->query($sql);
     </div>
 
     <div class="section2">
-    <div class="text"></div>
         <div id="AboutUs">ABOUT US</div>
         <div id="RestoJudulDeskripsi">
             <img src="Niku Ramen Resto.png" class="Restoran">
